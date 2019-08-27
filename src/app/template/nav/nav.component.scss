@@ -34,7 +34,7 @@ nav {
             margin-bottom: 5px;
             position: relative;
             background: #fff;
-            border-radius: 3px;
+            border-radius: 1px;
         }
     }
 
@@ -43,14 +43,13 @@ nav {
             height: calc(100vh - 70px); // second number is the nav height
         }
 
-        ul {
-            height: auto;
-        }
-
         span {
-            opacity: 1;
-            transform: rotate(45deg) translate(7px, 6px) scale(1.2);
             background: #fefefe;
+
+            &:nth-child(1) {
+                opacity: 1;
+                transform: rotate(45deg) translate(7px, 6px) scale(1.2);
+            }
 
             &:nth-child(2) {
                 opacity: 1;

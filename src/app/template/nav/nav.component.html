@@ -1,11 +1,18 @@
 <nav>
-  <div class="nav">
-    <ul>
-      <li>Home</li>
-      <li>Our Work</li>
-      <li>Services</li>
-      <li>About Us</li>
-      <li>Contact</li>
-    </ul>
+  <div class="nav" [ngClass]='active ? "active" : "inactive" '>
+    <div class='menu-button' (click)='openNav()'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>Home</li>
+        <li>Our Work</li>
+        <li>Services</li>
+        <li>About Us</li>
+        <li>Contact</li>
+      </ul>
+    </div>
   </div>
 </nav>

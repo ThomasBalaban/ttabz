@@ -1,0 +1,90 @@
+@import '../../../styles/helpers/vars.scss';
+
+.portfolioPiece {
+    margin: 20px 20px 0;
+
+    .imageDisplay {
+        width: 100%;
+
+        img {
+            display: block;
+            height: auto;
+            width: 85%;
+            margin: 0 auto;
+        }
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 20px 0 0;
+        margin: 0 0;
+        border-radius: 3px;
+        position: relative;
+        top: -10px;
+        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+
+        .card-info {
+            margin: 10px 0 0;
+            background: #f7f6f6;
+            padding: 5px 0;
+
+            .icon-open {
+                color: $green;
+                font-size: 5rem;
+            }
+
+            .icon-close {
+                font-size: 4.2rem;
+                margin: 4px 0px 8px;
+                color: #f7f6f6;
+                background: $green;
+                border-radius: 50px;
+            }
+
+            .card-info-inner {
+                background: #f7f6f6;
+                border-radius: 3px;
+                transition: all 0.5s ease;
+
+                &.inactive {
+                    height: 0;
+                    overflow: hidden;
+                }
+                
+                &.active {
+                    height: 400px;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+
+    .card-footer {
+        background: #0db991;
+        background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
+        position: relative;
+        top: -10px;
+        padding: 10px 0 0;
+        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+
+        .tech {
+            display: block;
+            line-height: 2;
+            padding: 0 10px;
+        }
+
+        span {
+            display: inline-block;
+            background: red;
+            margin: 5px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            line-height: 1.6;
+        }
+
+        p {
+            background: blue;
+            padding: 10px;
+        }
+    }
+}

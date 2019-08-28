@@ -1,3 +1,45 @@
-<ng-container *ngFor="let portPiece of portPieces">
-  <p>{{ portPiece.projectName }}</p>
+<ng-container *ngFor="let portPiece of portPieces; let i of index">
+  <div class='portfolioPiece'>
+    <article>
+
+      <div class="imageDisplay">
+        <img src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
+      </div>
+
+      <div class='card'>
+        <h3>{{ portPiece.projectName }}</h3>
+        <p>{{ portPiece.showCase }}</p>
+
+        <div class='card-info' (click)="openPiece(i)">
+            
+          <ng-container *ngIf="portPiece.on; else readLess">
+            <i class="material-icons icon-close">close</i>
+          </ng-container>
+          <ng-template #readLess>
+            <i class="material-icons icon-open">info</i>
+          </ng-template>
+          
+          <div class='card-info-inner' [ngClass]="portPiece.on ? 'active' : 'inactive'">
+            <ng-container *ngFor="let img of portPiece.displayedImage">
+              <p>{{img.imageName}}</p>
+              <img src="{{ img.imageUrl }}" alt="{{img.imageAlt}}"/>
+            </ng-container>
+            <p>{{ portPiece.projectDesc }}</p>
+            <p>{{ portPiece.projectSite }}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <div class='tech'>
+          <ng-container *ngFor="let techn of portPiece.techUsed">
+            <span>{{ techn.tech }}</span>
+          </ng-container>
+        </div>
+        <p>{{ portPiece.projectType }}</p>
+      </div>
+
+    </article>
+  </div>
 </ng-container>

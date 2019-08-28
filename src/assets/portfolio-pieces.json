@@ -2,17 +2,51 @@
     {
         "projectType": "Web",
         "projectName": "Fred Rogers",
-        "projectDesc": "short des",
-        "projectSite": "http://fredrogers.org",
-        "showCase": "Fred Rogers Website",
+        "projectDesc": "A project close to my heart, I had grown up on Fred Rogers the same as everyone in my generation! When we got the project, I got to meet the lead of his brand, and work with them on a design. After the design was completed I had built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal as they asked for easy continuous support.",
+        "projectSite": "https://www.fredrogers.org/",
+        "showCase": "A Friendly Neighborhood",
         "techUsed": [
             { "tech": "PHP" },
-            { "tech": "JavaScript" }
+            { "tech": "JavaScript" },
+            { "tech": "Drupal" },
+            { "tech": "CSS" },
+            { "tech": "HTML" }
         ],
         "displayedImage": [
             { 
                 "imageName": "The Test Image 1",
-                "imageUrl": "test1.png",
+                "imageUrl": "https://www.fredrogers.org/img/rollovers/home-dtn.jpg",
+                "imageAlt": "Test Image 1" 
+            },
+            { 
+                "imageName": "The Test Image 2",
+                "imageUrl": "test2.png",
+                "imageAlt": "Test Image 2" 
+            },
+            { 
+                "imageName": "The Test Image 3",
+                "imageUrl": "test3.png",
+                "imageAlt": "Test Image 3" 
+            }
+        ]
+    }, 
+    {
+        "projectType": "Web",
+        "projectName": "Fred Rogers",
+        "projectDesc": "A project close to my heart, I had grown up on Fred Rogers the same as everyone in my generation! When we got the project, I got to meet the lead of his brand, and work with them on a design. After the design was completed I had built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal as they asked for easy continuous support.",
+        "projectSite": "https://www.fredrogers.org/",
+        "showCase": "A Friendly Neighborhood",
+        "techUsed": [
+            { "tech": "PHP" },
+            { "tech": "JavaScript" },
+            { "tech": "Drupal" },
+            { "tech": "CSS" },
+            { "tech": "HTML" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://www.fredrogers.org/img/rollovers/home-dtn.jpg",
                 "imageAlt": "Test Image 1" 
             },
             { 

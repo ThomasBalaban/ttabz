@@ -1,0 +1,52 @@
+@import "../../../styles/helpers/animations.scss";
+@import "../../../styles/helpers/tools.scss";
+@import "../../../styles/helpers/generics.scss";
+
+
+
+
+main{
+    padding: 35px 35px 0 35px;
+    background: $backGrey;
+
+    h1{
+        @include fontSettings($white, 38px, 500, 1, 100px 0 10px);
+        transition: all 0.25s linear;
+    }
+
+    h2{
+        @include fontSettings($white, 26px, 400, 1, 0px 42px 75px 0);
+        transition: all 0.25s linear 0.1s;
+    }
+
+    section{
+        background: transparent;
+        margin: 240px 0 0;
+        
+        div{
+            @include dimensions($blue, 100%, 175px, 7.5px, 0px auto 10px);
+            opacity: 0.95;
+
+            &:hover{
+                background: $green;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+#boxA{
+    transition: all 0.25s linear 0.2s;
+}
+
+#boxB{
+    transition: all 0.25s linear 0.3s;
+}
+
+#boxC{
+    transition: all 0.25s linear 0.4s;
+}
+
+#boxD{
+    transition: all 0.25s linear 0.5s;
+}

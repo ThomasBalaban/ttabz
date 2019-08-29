@@ -1,0 +1,33 @@
+@import "../../../styles/helpers/animations.scss";
+@import "../../../styles/helpers/tools.scss";
+@import "../../../styles/helpers/generics.scss";
+@import "../../../styles/helpers/pseudo.scss";
+
+div{
+    padding: 35px 35px 0 35px;
+    background: $offWhite;
+
+    h1{
+        @include fontSettings($textGrey, 38px, 500, 1, 100px 0 10px);
+        transition: all 0.25s linear;
+    }
+
+    p{
+        @include fontSettings($textGrey, 18px, 300, 1.2, 0px 0 20px);
+        transition: all 0.25s linear 0.1s;
+    }
+
+    button{
+        @include dimensions($blue, 175px, 50px, 5px, 50px auto -25px);
+        transition: all 0.25s linear 0.2s;
+        //opacity: 0.95
+
+        &:hover{
+            background: $green;
+        }
+
+        span{
+            @include fontSettings($white, 20px, 300, 1, auto);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "./vars.scss";
+
+
+.header-norm{
+    height: 55px;
+}
+
+.header-hc{
+    height: 100%;
+}
+  
+@mixin navButtonChange($opc, $form, $tran){
+    opacity: $opc;
+    transform: $form;
+    transition: $tran;
+}
+
+.button-norm1{
+    @include navButtonChange(0, translateY(-100px), all 0.25s linear 0.4s);
+}
+
+.button-hc1{
+    @include navButtonChange(1, translateY(50px), all 0.25s linear 0s);
+}
+
+.button-norm2{
+    @include navButtonChange(0, translateY(-100px), all 0.25s linear 0.3s);
+}
+
+.button-hc2{
+    @include navButtonChange(1, translateY(50px), all 0.25s linear 0.1s);
+}
+
+.button-norm3{
+    @include navButtonChange(0, translateY(-100px), all 0.25s linear 0.2s);
+}
+
+.button-hc3{
+    @include navButtonChange(1, translateY(50px), all 0.25s linear 0.2s);
+}
+
+.button-norm4{
+    @include navButtonChange(0, translateY(-100px), all 0.25s linear 0.1s);
+}
+
+.button-hc4{
+    @include navButtonChange(1, translateY(50px), all 0.25s linear 0.3s);
+}
+
+.button-norm5{
+    @include navButtonChange(0, translateY(-100px), all 0.25s linear 0s);
+}
+
+.button-hc5{
+    @include navButtonChange(1, translateY(50px), all 0.25s linear 0.4s);
+}
+
+
+
+@mixin barChange($color, $tran){
+    background: $color;
+    transform: $tran;
+    transition: all 0.25s linear;
+}
+
+.bar-norm{
+    @include barChange($white, translateY(0px) rotate(0));
+    opacity: 1;
+}
+
+.bar-hc1{
+    @include barChange(red, translateY(10px) rotate(45deg));
+}
+
+.bar-hc2{
+    @include barChange(red, translateY(1px) rotate(-45deg));
+}
+
+.bar-hc3{
+    opacity: 0;
+}

@@ -1,0 +1,25 @@
+@import "../../../styles/helpers/animations.scss";
+@import "../../../styles/helpers/tools.scss";
+@import "../../../styles/helpers/generics.scss";
+
+header{
+    background: black;
+    padding: 25px;
+
+    .temp-seal{
+        @include dimensions($white, 250px, 250px, 125px, 60px auto 20px);
+    }
+
+    h1{
+        @include fontSettings($blue, 38px, 600, 1, 10px auto);
+    }
+
+    .intro-p1{
+        @include fontSettings($white, 22px, 400, 1, 10px 10px 0);
+    }
+
+    .intro-p2{
+        @include fontSettings($green, 22px, 400, 1, 10px 50px);
+    }
+}
+

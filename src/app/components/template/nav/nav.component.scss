@@ -21,6 +21,10 @@ nav {
         li {
             padding: 10px 0;
             font-size: 2rem;
+
+            &.active a {
+                color: red;
+            }
         }
     }
 

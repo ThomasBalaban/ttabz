@@ -1,0 +1,30 @@
+[
+    {
+        "projectType": "Web",
+        "projectName": "Fred Rogers",
+        "projectDesc": "short des",
+        "projectSite": "http://fredrogers.org",
+        "showCase": "Fred Rogers Website",
+        "techUsed": [
+            { "tech": "PHP" },
+            { "tech": "JavaScript" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "test1.png",
+                "imageAlt": "Test Image 1" 
+            },
+            { 
+                "imageName": "The Test Image 2",
+                "imageUrl": "test2.png",
+                "imageAlt": "Test Image 2" 
+            },
+            { 
+                "imageName": "The Test Image 3",
+                "imageUrl": "test3.png",
+                "imageAlt": "Test Image 3" 
+            }
+        ]
+    }
+]

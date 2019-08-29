@@ -1,0 +1,20 @@
+<nav>
+  <div class="nav" [ngClass]='active ? "active" : "inactive" '>
+    <div class='menu-button' (click)='openNav()'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/" (click)='openNav()'>Home</a></li>
+        <li routerLinkActive="active"><a routerLink="/portfolio" (click)='openNav()'>Our Work</a></li>
+        <li routerLinkActive="active"><a routerLink="/services" (click)='openNav()'>Services</a></li>
+        <li routerLinkActive="active"><a routerLink="/about" (click)='openNav()'>About Us</a></li>
+        <li routerLinkActive="active"><a routerLink="/contact" (click)='openNav()'>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

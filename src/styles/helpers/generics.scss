@@ -1,4 +1,4 @@
-.--flex {
+._flex {
     display: flex;
 
     &.--column {
@@ -8,11 +8,10 @@
     &.--between {
         justify-content: space-between;
     }
-}
 
-.--wrap {
-    max-width: 1080px;
-    margin: 0 auto;
+    &.--center {
+        justify-content: center;
+    }
 }
 
 .mobile {

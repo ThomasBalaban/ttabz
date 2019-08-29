@@ -11,6 +11,8 @@ import { Subscription } from 'rxjs';
 export class PortfolioPieceComponent implements OnInit {
   @Input() piece;
 
+  selectedIndex: any;
+
   public portPieces: PortPiece[] = [];
 
   private portPieceSubscription: Subscription;
@@ -24,6 +26,10 @@ export class PortfolioPieceComponent implements OnInit {
       console.log(res);
       this.portPieces = res;
     });
+  }
+
+  openPiece(index: any) {
+    index.on = !index.on;
   }
 
 }

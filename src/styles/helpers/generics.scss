@@ -27,3 +27,177 @@
         display: block;
     }
 }
+
+
+
+
+
+//----------------------------------Trisha's Generics Poo Baby----------------//
+
+
+
+
+
+// ------gird system------//
+
+.grid3 {
+    width: 30%;
+}
+
+.grid7 {
+    width: 70%;
+}
+
+.grid8 {
+    width: 80%;
+}
+
+.grid10 {
+    width: 100%;
+}
+
+.hgrid10 {
+    height: 100%;
+}
+
+
+//------gird system------//
+
+//------positions------//
+
+.abs {
+    position: absolute;
+}
+
+.fix {
+    position: fixed;
+}
+
+.rel {
+    position: relative;
+}
+
+//------positions------//
+
+//------flex------//
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.btw { 
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+//------flex------//
+
+//------zindex------//
+
+.z1m {
+    z-index: -1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z3 {
+    z-index: 3;
+}
+
+.z4 {
+    z-index: 4;
+}
+
+.z5{
+    z-index: 5;
+}
+
+.z6 {
+    z-index: 6;
+}
+
+//------zindex------//
+
+//------font settings------//
+
+
+
+
+
+//------font settings------//
+
+.t-center{
+    text-align: center;
+}
+
+.t-left{
+    text-align: left;
+}
+//------direction------//
+
+.top {
+    top: 0px;
+}
+
+.left {
+    left: 0px;
+}
+
+.right {
+    right: 0px;
+}
+
+.bottom{
+    bottom: 0px;
+}
+
+//------direction------//
+
+//------other------//
+
+.auto {
+    margin: 0px auto;
+}
+
+.opacity-none {
+    opacity: 0;
+}
+
+.no-background{
+    background: none;
+}
+
+.no-border{
+    border-style: none;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.over-x{
+    overflow: hidden;
+}
+
+.nopad{
+    padding: 0;
+}
+
+//------other------//
+
+.none{
+    display: none;
+}

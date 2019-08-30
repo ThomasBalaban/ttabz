@@ -1,20 +1,23 @@
-<nav>
-  <div class="nav" [ngClass]='active ? "active" : "inactive"'>
-    <div class='menu-button' (click)='openNav()'>
-      <span></span>
-      <span></span>
-      <span></span>
+<nav class = "navbar border flex abs z5 grid10 header-hd" id="primeNav" [ngClass] = "hchange ? 'header-hc' : 'header-norm'"> 
+  <div class = "grid10" id = "navHoldings"> <!--opacity-none-->
+    <button class="button-holder no-border no-background abs point flex column center z4"  id ="Button" (click)='openNav()'>
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <div class= "title-holder top abs flex hgrid10 center grid10">
+          <h1 class= "prime-f">T&Ttabz</h1>
+      </div>
+      <div class= "ul-list flex row center grid10" id= "navid">
+          <ul class = "flex column grid10" id= "divid">
+            <li routerLinkActive="active" class = "abs li1 grid10" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/" (click)='openNav()'>Home</a></li>
+            <li routerLinkActive="active" class = "abs li2 grid10"><a routerLink="/portfolio" (click)='openNav()'>Our Work</a></li>
+            <li routerLinkActive="active" class = "abs li3 grid10"> <a routerLink="/services" (click)='openNav()'  >Services</a></li>
+            <li routerLinkActive="active" class = "abs li4 grid10"><a routerLink="/about" (click)='openNav()'>About Us</a></li>
+            <li routerLinkActive="active" class = "abs li5 grid10"><a routerLink="/contact" (click)='openNav()' >Contact</a></li>
+          </ul>
+      </div>
     </div>
-    <div class="menu">
-      <ul>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/" (click)='openNav()'>Home</a></li>
-        <li routerLinkActive="active"><a routerLink="/portfolio" (click)='openNav()'>Our Work</a></li>
-        <li routerLinkActive="active"><a routerLink="/services" (click)='openNav()'>Services</a></li>
-        <li routerLinkActive="active"><a routerLink="/about" (click)='openNav()'>About Us</a></li>
-        <li routerLinkActive="active"><a routerLink="/contact" (click)='openNav()'>Contact</a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
 
 <router-outlet></router-outlet>

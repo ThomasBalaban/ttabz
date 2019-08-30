@@ -1,1 +1,24 @@
 // globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+
+@mixin border($color, $size){
+    border-color: $color;
+    box-sizing: border-box;
+    border-width: $size;
+    border-style: solid;
+}
+
+@mixin dimensions($color, $width, $height, $radius, $marg){
+    background: $color;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    margin: $marg;
+}
+
+@mixin fontSettings($color, $size, $weight, $line, $marg){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    margin: $marg;
+}

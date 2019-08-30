@@ -1,16 +1,21 @@
 // styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
-    font-family: $bebas;
+    //line-height: 1;
+    //font-family: $bebas;
 }
 
 h3 {
-    font-size: 5rem;
-    font-weight: 900;
+    //font-size: 5rem;
+    //font-weight: 900;
     
 }
 
 p {
-    font-size: 2rem;
+    //font-size: 2rem;
+}
+
+h1 ,h2, h3, h4, p, a {
+    font-family: Aproxima-nova, "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;;
+    text-decoration: none;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef, ViewChild  } from '@angular/core';
 import { PortPieceService } from 'src/app/services/port-piece.service';
 import { PortPiece } from 'src/app/models/port-piece.model';
 import { Subscription } from 'rxjs';
@@ -9,30 +9,34 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./portfolio-piece.component.scss']
 })
 export class PortfolioPieceComponent implements OnInit {
-  @Input() piece;
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    const xwidth = event.target.innerWidth;
-    const xheight = event.target.innerHeight
-
-    if (xwidth >= 1024 && xheight >= 768) {
-      this.desktop = true;
-    } else {
-      this.desktop = false;
-    }
-  }
-
   selectedIndex: any;
   mediaQuery$: Subscription;
   activeMediaQuery: string;
-  desktop: boolean = false;
+  desktop = false;
+  srcHeight: number;
+  srcWidth: number;
 
   public portPieces: PortPiece[] = [];
   private portPieceSubscription: Subscription;
 
+  @Input() piece;
+
+  @ViewChild('portfolio')
+  portfolio: ElementRef;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event?) {
+    this.srcHeight = window.innerHeight;
+    this.srcWidth = window.innerWidth;
+    this.checkForDesktop(this.srcWidth, this.srcHeight);
+  }
+
   constructor(
     private portPieceService: PortPieceService,
-  ) { }
+    private el: ElementRef
+  ) {
+    this.onResize();
+  }
 
   ngOnInit() {
     this.portPieceSubscription = this.portPieceService.getData().subscribe( (res: PortPiece[]) => {
@@ -40,22 +44,29 @@ export class PortfolioPieceComponent implements OnInit {
     });
   }
 
+  checkForDesktop(width, height) {
+    if (width >= 1024 && height >= 768) {
+      this.desktop = true;
+    } else {
+      this.desktop = false;
+    }
+  }
+
   openPiece(index: any) {
     index.on = !index.on;
   }
 
   onCardHover(event) {
-    const items = document.querySelectorAll('.portfolioPiece');
-    console.log(items[1])
+    const items: any = document.querySelectorAll('.portfolioPiece');
 
-    if (event.type == 'mouseover' && this.desktop) {
-      for( let i = 0; i < items.length; i++ ) {
-        items[i].classList.add('item-hovered');
+    if (event.type === 'mouseover' && this.desktop) {
+      for ( const item of items ) {
+        item.classList.add('item-hovered');
       }
       event.target.closest('.portfolioPiece').classList.add('hovered');
     } else {
-      for( let i = 0; i < items.length; i++ ) {
-        items[i].classList.remove('item-hovered');
+      for ( const item of items ) {
+        item.classList.remove('item-hovered');
       }
       event.target.closest('.portfolioPiece').classList.remove('hovered');
     }

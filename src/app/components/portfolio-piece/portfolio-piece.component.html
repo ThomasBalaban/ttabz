@@ -1,7 +1,10 @@
 <div class="portfolio">
   <div class='portfolioPiece' *ngFor="let portPiece of portPieces; let i of index" (mouseover)="onCardHover($event)" (mouseout)="onCardHover($event)">
 
-      <img class='cardImage' src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
+      <div class="imageHolder">
+        <img class='cardImage' src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
+        <p class='learn-more' *ngIf="desktop">Learn More</p>
+      </div>
 
       <div class="card-container">
         <div class='card'>

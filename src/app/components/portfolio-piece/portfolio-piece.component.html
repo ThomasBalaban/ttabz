@@ -1,45 +1,36 @@
-<ng-container *ngFor="let portPiece of portPieces; let i of index">
-  <div class='portfolioPiece'>
-    <article>
+<div class="portfolio">
+  <div class='portfolioPiece' *ngFor="let portPiece of portPieces; let i of index" (mouseover)="onCardHover($event)" (mouseout)="onCardHover($event)">
 
-      <div class="imageDisplay">
-        <img src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
-      </div>
+      <img class='cardImage' src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
 
-      <div class='card'>
-        <h3>{{ portPiece.projectName }}</h3>
-        <p>{{ portPiece.showCase }}</p>
-
-        <div class='card-info' (click)="openPiece(i)">
-            
-          <ng-container *ngIf="portPiece.on; else readLess">
-            <i class="material-icons icon-close">close</i>
-          </ng-container>
-          <ng-template #readLess>
-            <i class="material-icons icon-open">info</i>
-          </ng-template>
-          
-          <div class='card-info-inner' [ngClass]="portPiece.on ? 'active' : 'inactive'">
-            <ng-container *ngFor="let img of portPiece.displayedImage">
-              <p>{{img.imageName}}</p>
-              <img src="{{ img.imageUrl }}" alt="{{img.imageAlt}}"/>
+      <div class="card-container">
+        <div class='card'>
+          <h3><a [attr.href]="portPiece.projectSite" target="_blank">{{ portPiece.projectName }}</a></h3>
+          <h4>{{ portPiece.showCase }}</h4>    
+          <div class='card-info'> 
+            <div class='card-info-inner' [ngClass]="portPiece.on ? 'active' : 'inactive'">
+              <p>{{ portPiece.projectDesc }}</p>
+              <a [attr.href]="portPiece.projectSite" target="_blank">Visit {{ portPiece.projectName }}</a>
+            </div>
+          </div>
+          <div class="icon-container" (click)="openPiece(i)">
+            <ng-container *ngIf="portPiece.on; else readLess">
+              <i class="material-icons icon-close">arrow_drop_up</i>
             </ng-container>
-            <p>{{ portPiece.projectDesc }}</p>
-            <p>{{ portPiece.projectSite }}</p>
+            <ng-template #readLess>
+              <i class="material-icons icon-open">arrow_drop_down</i>
+            </ng-template>
           </div>
         </div>
-
-      </div>
-
-      <div class="card-footer">
-        <div class='tech'>
-          <ng-container *ngFor="let techn of portPiece.techUsed">
-            <span>{{ techn.tech }}</span>
-          </ng-container>
+        <div class="card-footer">
+          <div class='tech'>
+            <ng-container *ngFor="let techn of portPiece.techUsed">
+              <span>{{ techn.tech }}</span>
+            </ng-container>
+          </div>
+          <h5>{{ portPiece.projectType }}</h5>
         </div>
-        <p>{{ portPiece.projectType }}</p>
       </div>
 
-    </article>
   </div>
-</ng-container>
+</div>

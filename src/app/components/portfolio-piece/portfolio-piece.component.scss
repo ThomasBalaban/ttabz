@@ -1,90 +1,196 @@
 @import '../../../styles/helpers/vars.scss';
 
+.portfolio {
+    padding: 20px 20px 0;
+    width: 100%;
+    column-count: 1;
+    column-gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    @media(min-width: 670px){ 
+        column-count: 2;
+    }
+
+    @media(min-width: 1120px){ 
+        column-count: 3;
+    }
+
+    @media(min-width: 1024px),(max-height: 768px) {
+        column-gap: 40px;
+    }
+}
+
 .portfolioPiece {
-    margin: 20px 20px 0;
+    break-inside: avoid;
+    transition: all 0.2s ease;
+    margin: 0 0 20px;
 
-    .imageDisplay {
-        width: 100%;
+    @media(min-width: 1024px),(max-height: 768px) {
+        &:hover {
+            cursor: pointer;
+        }
 
-        img {
-            display: block;
-            height: auto;
-            width: 85%;
-            margin: 0 auto;
+        &.hover {
+            transform: scale(1.1);
+        }
+
+        &.item-hovered:not(.hovered) {
+            transform: scale(0.9);
         }
     }
+}
 
-    .card {
-        background: #ffffff;
+.cardImage {
+    width: 88%;
+    margin: 0 6%;
+    border-radius: 3px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px 0 0;
+    margin: 0 0;
+    border-radius: 3px;
+    position: relative;
+    top: -10px;
+    box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+
+    h3 a {
+        padding: 0 20px;
+        margin: 10px 0 5px;
+        line-height: 0.85;
+        font-size: 5rem;
+        color: $green;
+        text-decoration: none;
+        display: block;
+    }
+
+    h4 {
+        padding: 0 20px;
+        font-size: 3rem;
+    }
+
+    .card-info {
+        background: #fff;
+        position: relative;
         padding: 20px 0 0;
-        margin: 0 0;
-        border-radius: 3px;
-        position: relative;
-        top: -10px;
-        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: inset 0px -23px 15px -23px rgba(0,0,0,0.75);
 
-        .card-info {
-            margin: 10px 0 0;
-            background: #f7f6f6;
-            padding: 5px 0;
+        .card-info-inner {
+            transition: all 0.5s ease;
+ 
+            &.active {
+                max-height: 800px;
+                overflow-y: scroll;
 
-            .icon-open {
+                @media(min-width: 670px){ 
+                    max-height: inherit;
+                }
+            }
+
+            &.inactive {
+                max-height: 65px;
+                overflow: hidden;
+
+                @media(min-width: 670px){ 
+                    max-height: inherit;
+                }
+
+                @media(min-width: 1024px),(max-height: 768px) {
+                    display: none;
+                }
+            }
+
+            p {
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            a {
                 color: $green;
-                font-size: 5rem;
-            }
-
-            .icon-close {
-                font-size: 4.2rem;
-                margin: 4px 0px 8px;
-                color: #f7f6f6;
-                background: $green;
-                border-radius: 50px;
-            }
-
-            .card-info-inner {
-                background: #f7f6f6;
-                border-radius: 3px;
-                transition: all 0.5s ease;
-
-                &.inactive {
-                    height: 0;
-                    overflow: hidden;
-                }
-                
-                &.active {
-                    height: 400px;
-                    overflow-y: scroll;
-                }
+                text-decoration: none;
+                display: block;
+                font-size: 3rem;
+                font-family: $bebas;
+                margin: 15px 0 20px;
             }
         }
     }
+}
 
-    .card-footer {
-        background: #0db991;
-        background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
-        position: relative;
-        top: -10px;
-        padding: 10px 0 0;
-        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+.icon-container {
+    padding: 0;
+    height: 40px;
+    background: linear-gradient(160deg, #f2a713 2%,#ff0068 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        .tech {
-            display: block;
-            line-height: 2;
-            padding: 0 10px;
-        }
+    @media(min-width: 670px){ 
+        display: none;
+    }
 
-        span {
-            display: inline-block;
-            background: red;
-            margin: 5px;
-            padding: 2px 5px;
-            border-radius: 3px;
-            line-height: 1.6;
-        }
+    i {
+        color: #a1ff5e;
+        font-size: 7rem;
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        text-shadow:
+            -1px -1px 0 rgba(170, 9, 236, 0.2),  
+            1px -1px 0 rgba(0, 0, 0, 0.2),
+            -1px 1px 0 rgba(0, 0, 0, 0.2),
+            1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+}
 
-        p {
-            background: blue;
-            padding: 10px;
-        }
+.card-footer {
+    position: relative;
+    background: #0db991;
+    background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
+    top: -10px;
+    padding: 3px 0 0;
+    box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+
+    .tech {
+        display: block;
+        padding: 0 10px 3px;
+    }
+
+    span {
+        display: inline-block;
+        background: #aa09ec ;
+        background: linear-gradient(175deg, #aa09ec 0%, #6e00ff 100%);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        margin: 5px;
+        padding: 6px 10px 3px;
+        border-radius: 3px;
+        line-height: 1;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-family: $bebas;
+        font-weight: 900;
+        letter-spacing: 0.15rem;
+        color: #ffffff;
+        text-shadow:
+            -1px -1px 0 rgba(170, 9, 236, 0.2),  
+            1px -1px 0 rgba(0, 0, 0, 0.2),
+            -1px 1px 0 rgba(0, 0, 0, 0.2),
+            1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    h5 {
+        background: #ff0068;
+        background: linear-gradient(180deg, #c010d3 1%,#ff0068 100%); 
+        padding: 10px;
+        font-weight: 900;
+        font-size: 3.6rem;
+        color: #ffffff;
+        letter-spacing: 0.15rem;
+        box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+        text-shadow:
+            -1px -1px 0 rgba(0, 0, 0, 0.2),  
+            1px -1px 0 rgba(0, 0, 0, 0.2),
+            -1px 1px 0 rgba(0, 0, 0, 0.2),
+            1px 1px 0 rgba(0, 0, 0, 0.2);
     }
 }

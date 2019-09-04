@@ -25,7 +25,8 @@ import { AboutUsPageComponent } from './static/about-us-page/about-us-page.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

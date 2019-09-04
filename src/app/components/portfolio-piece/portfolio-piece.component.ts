@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, ElementRef, ViewChild  } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef, ViewChild, Renderer2  } from '@angular/core';
 import { PortPieceService } from 'src/app/services/port-piece.service';
 import { PortPiece } from 'src/app/models/port-piece.model';
 import { Subscription } from 'rxjs';
@@ -21,8 +21,8 @@ export class PortfolioPieceComponent implements OnInit {
 
   @Input() piece;
 
-  @ViewChild('portfolio')
-  portfolio: ElementRef;
+  @ViewChild('background')
+  background: ElementRef;
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
@@ -33,7 +33,7 @@ export class PortfolioPieceComponent implements OnInit {
 
   constructor(
     private portPieceService: PortPieceService,
-    private el: ElementRef
+    private rd: Renderer2
   ) {
     this.onResize();
   }
@@ -52,8 +52,25 @@ export class PortfolioPieceComponent implements OnInit {
     }
   }
 
-  openPiece(index: any) {
+  openDetails(index: any) {
     index.on = !index.on;
+  }
+
+  openPiece(event) {
+    const items: any = document.querySelectorAll('.portfolioPiece');
+
+    if ( !event.target.closest('.portfolioPiece').classList.contains('fullscreen') ) {
+      for ( const item of items ) {
+        item.classList.remove('fullscreen');
+      }
+      event.target.closest('.portfolioPiece').classList.add('fullscreen');
+      this.background.nativeElement.style.display = 'block';
+    } else {
+      for ( const item of items ) {
+        item.classList.remove('fullscreen');
+        this.background.nativeElement.style.display = 'none';
+      }
+    }
   }
 
   onCardHover(event) {

@@ -1,9 +1,10 @@
 <div class="portfolio">
+  <div class='background' #background></div>
   <div class='portfolioPiece' *ngFor="let portPiece of portPieces; let i of index" (mouseover)="onCardHover($event)" (mouseout)="onCardHover($event)">
 
       <div class="imageHolder">
         <img class='cardImage' src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
-        <p class='learn-more' *ngIf="desktop">Learn More</p>
+        <button class='learn-more' (click)="openPiece($event)" *ngIf="desktop">Learn More</button>
       </div>
 
       <div class="card-container">
@@ -16,7 +17,7 @@
               <a [attr.href]="portPiece.projectSite" target="_blank">Visit {{ portPiece.projectName }}</a>
             </div>
           </div>
-          <div class="icon-container" (click)="openPiece(i)">
+          <div class="icon-container" (click)="openDetails(i)">
             <ng-container *ngIf="portPiece.on; else readLess">
               <i class="material-icons icon-close">arrow_drop_up</i>
             </ng-container>

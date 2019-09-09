@@ -1,4 +1,5 @@
 @import '../../../styles/helpers/vars.scss';
+@import '../../../styles/helpers/tools.scss';
 
 .portfolio {
     padding: 20px 20px 0;
@@ -21,22 +22,23 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
+        background: #e6e6e6;
         left: 0;
         top: 0;
         z-index: 2;
         display: none;
     }
-}
+} 
 
 .portfolioPiece {
     break-inside: avoid;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     margin: 0 0 20px;
 
     @media(min-width: 1024px),(max-height: 768px) {
-        &.hover {
-            transform: scale(1.1);
+        &.hovered {
+            transform: scale(1.05);
+            transform-origin: top center;
         }
 
         &.item-hovered:not(.hovered) {
@@ -46,12 +48,92 @@
 
     &.fullscreen {
         position: fixed;
-        width: 80%;
-        height: 80%;
-        overflow: hidden;
-        left: 10%;
-        top: 10%;
+        width: 96vw;
+        margin: 2vh 2vw;
+        height: 96vh;
+        background: #fff;
+        left: 0%;
+        top: 0%;
         z-index: 2;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+
+        @media(min-width: 1024px),(max-height: 768px) {
+            &.hovered {
+                transform: scale(1);
+            }
+        }
+
+        .imageHolder {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: auto;
+                height: 101%;
+                margin: 0;
+            }
+
+            .learn-more {
+                display: none;
+            }
+
+            .close {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .card-container {
+            width: 40%;
+            height: calc(100vh - 4vh);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            background: #ffffff;
+            position: relative;
+            z-index: 2;
+
+            .card {
+                top: 0;
+                box-shadow: none;
+                border-radius: 0;
+                width: 100%;
+                left: 0;
+
+                .card-info {
+                    box-shadow: none;
+
+                    .card-info-inner {
+                        display: inline-block;
+
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .card-footer {
+                top: 0;
+                padding: 0;
+                width: 100%;
+                left: 0;
+
+
+                .tech {
+                    padding: 3px 0;
+                }
+            }
+        }
     }
 }
 
@@ -67,14 +149,13 @@
     .learn-more {
         margin: 0 auto;
         position: absolute;
-        top: 91%;
+        bottom: 10px;
         left: 50%;
         width: 50%;
-        transform: translate(-50%, -50%);
-        background: #0db991;
-        background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
+        transform: translateX(-50%);
+        @include bgGrad(#0db991, #a1ff5e, 148deg);
         box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
-        padding: 10px 10px 15px;
+        padding: 5px 10px 5px;
         border-radius: 3px;
         border: none;
         line-height: 1;
@@ -84,14 +165,23 @@
         font-weight: 900;
         letter-spacing: 0.15rem;
         color: #ffffff;
-        text-shadow:
-            -1px -1px 0 rgba(0, 0, 0, 0.6),  
-            1px -1px 0 rgba(0, 0, 0, 0.6),
-            -1px 1px 0 rgba(0, 0, 0, 0.6),
-            1px 1px 0 rgba(0, 0, 0, 0.6);
+        @extend %textShadow;
 
         &:hover {
             cursor: pointer;
+        }
+    }
+
+    .close {
+        display: none;
+        cursor: pointer;
+        background: #0db991;
+        border: none;
+        color: #ffffff;
+        padding: 3px 5px;
+
+        i {
+            font-size: 4rem;
         }
     }
 }
@@ -104,6 +194,7 @@
     position: relative;
     top: -10px;
     box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+    text-align: center;
 
     h3 a {
         padding: 0 20px;
@@ -171,7 +262,7 @@
 .icon-container {
     padding: 0;
     height: 40px;
-    background: linear-gradient(160deg, #f2a713 2%,#ff0068 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    @include bgGrad(#f2a713, #ff0068, 160deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,21 +275,17 @@
         color: #a1ff5e;
         font-size: 7rem;
         box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
-        text-shadow:
-            -1px -1px 0 rgba(170, 9, 236, 0.2),  
-            1px -1px 0 rgba(0, 0, 0, 0.2),
-            -1px 1px 0 rgba(0, 0, 0, 0.2),
-            1px 1px 0 rgba(0, 0, 0, 0.2);
+        @extend %textShadow;
     }
 }
 
 .card-footer {
     position: relative;
-    background: #0db991;
-    background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
+    @include bgGrad(#0db991, #a1ff5e, 148deg);
     top: -10px;
     padding: 3px 0 0;
     box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+    text-align: center;
 
     .tech {
         display: block;
@@ -207,8 +294,7 @@
 
     span {
         display: inline-block;
-        background: #aa09ec ;
-        background: linear-gradient(175deg, #aa09ec 0%, #6e00ff 100%);
+        @include bgGrad(#aa09ec, #6e00ff, 175deg);
         box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
         margin: 5px;
         padding: 6px 10px 3px;
@@ -220,26 +306,18 @@
         font-weight: 900;
         letter-spacing: 0.15rem;
         color: #ffffff;
-        text-shadow:
-            -1px -1px 0 rgba(170, 9, 236, 0.2),  
-            1px -1px 0 rgba(0, 0, 0, 0.2),
-            -1px 1px 0 rgba(0, 0, 0, 0.2),
-            1px 1px 0 rgba(0, 0, 0, 0.2);
+        @extend %textShadow;
     }
 
     h5 {
-        background: #ff0068;
-        background: linear-gradient(180deg, #c010d3 1%,#ff0068 100%); 
+        @include bgGrad(#c010d3, #ff0068, 180deg);
+        text-align: center;
         padding: 10px;
         font-weight: 900;
         font-size: 3.6rem;
         color: #ffffff;
         letter-spacing: 0.15rem;
         box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-        text-shadow:
-            -1px -1px 0 rgba(0, 0, 0, 0.2),  
-            1px -1px 0 rgba(0, 0, 0, 0.2),
-            -1px 1px 0 rgba(0, 0, 0, 0.2),
-            1px 1px 0 rgba(0, 0, 0, 0.2);
+        @extend %textShadow;
     }
 }

@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './portfolio-piece.component.html',
   styleUrls: ['./portfolio-piece.component.scss']
 })
+
 export class PortfolioPieceComponent implements OnInit {
   selectedIndex: any;
   mediaQuery$: Subscription;

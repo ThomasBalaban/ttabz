@@ -5,6 +5,7 @@
       <div class="imageHolder">
         <img class='cardImage' src="{{ portPiece.displayedImage[0].imageUrl }}" alt="{{ portPiece.displayedImage[0].imageAlt }}"/>
         <button class='learn-more' (click)="openPiece($event)" *ngIf="desktop">Learn More</button>
+        <button class='close' (click)="openPiece($event)" *ngIf="desktop"><i class="material-icons">close</i></button>
       </div>
 
       <div class="card-container">

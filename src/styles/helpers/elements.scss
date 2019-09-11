@@ -11,6 +11,13 @@ h3 {
     
 }
 
-p, span, ul, li, a {
+p, span, ul, li, a, input, textarea {
     font-size: 2rem;
+    $lato: 'lato', $fallback;
+}
+
+a {
+    color: $green;
+    text-decoration: none;
+    text-transform: uppercase;
 }

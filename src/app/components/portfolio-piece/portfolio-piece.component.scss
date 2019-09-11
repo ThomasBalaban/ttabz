@@ -49,8 +49,8 @@
     &.fullscreen {
         position: fixed;
         width: 96vw;
-        margin: 2vh 2vw;
-        height: 96vh;
+        margin: calc(2vh + 80px) 2vw 2vh;
+        height: calc(96vh - 80px);
         background: #fff;
         left: 0%;
         top: 0%;
@@ -93,7 +93,7 @@
 
         .card-container {
             width: 40%;
-            height: calc(100vh - 4vh);
+            height: calc(100vh - (4vh + 80px));
             display: flex;
             flex-direction: column;
             justify-content: space-between;

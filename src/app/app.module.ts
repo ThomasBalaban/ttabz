@@ -11,6 +11,7 @@ import { HomePageComponent } from './static/home-page/home-page.component';
 import { ServicesPageComponent } from './static/services-page/services-page.component';
 import { ContactPageComponent } from './static/contact-page/contact-page.component';
 import { AboutUsPageComponent } from './static/about-us-page/about-us-page.component';
+import { FooterComponent } from './components/template/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutUsPageComponent } from './static/about-us-page/about-us-page.compo
     HomePageComponent,
     ServicesPageComponent,
     ContactPageComponent,
-    AboutUsPageComponent
+    AboutUsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

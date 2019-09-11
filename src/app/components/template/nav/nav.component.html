@@ -1,9 +1,13 @@
 <nav>
+  <div class='topcolorbar'></div>
   <div class="nav" [ngClass]='active ? "active" : "inactive"'>
     <div class='menu-button' (click)='openNav()'>
-      <span></span>
-      <span></span>
-      <span></span>
+      <div class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="text"><p>Menu</p></div>
     </div>
     <div class="menu">
       <ul>
@@ -15,6 +19,5 @@
       </ul>
     </div>
   </div>
+  <div class='botcolorbar'></div>
 </nav>
-
-<router-outlet></router-outlet>

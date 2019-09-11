@@ -1,3 +1,53 @@
-<p>
-  contact-page works!
-</p>
+<div class="contact-page">
+  <h2>Contact Us</h2>
+
+  <div class="contact-information">
+    <div class="background">
+      <h3>Reach Out Directly</h3>
+      <p>If you have any questions or need some help, you can call, text, or email us!</p>
+      <div class="call">
+        <div class="icons">
+          <i class="material-icons">phone_android</i>
+        </div>
+        <div class="info">
+          <p>724-691-8106</p>
+        </div>
+      </div>
+      <div class="email">
+        <div class="icons">
+          <i class="material-icons">email</i>
+        </div>
+        <div class="info">
+          <p><a href="mailto:balabaninteractive@gmail.com">balabaninteractive@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="frmContact">
+    <div class="background">
+      <h3>The ol' fashion</h3>
+      <p>If you have any questions or need some help, you can call, text, or email us!</p>
+      <div id="mail-status"></div>
+      <div>
+          <label>Name</label><span id="userName-info" class="info"></span>
+          <input type="text" name="userName" id="userName" class="demoInputBox">
+      </div>
+      <div>
+          <label>Email</label><span id="userEmail-info" class="info"></span>
+          <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
+      </div>
+      <div>
+          <label>Subject</label><span id="subject-info" class="info"></span>
+          <input type="text" name="subject" id="subject" class="demoInputBox">
+      </div>
+      <div>
+          <label>Message</label><span id="content-info" class="info"></span>
+          <textarea name="content" id="content" class="demoInputBox" cols="30" rows="6"></textarea>
+      </div>
+      <div>
+          <button name="submit" class="btnAction" onClick="sendContact();">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

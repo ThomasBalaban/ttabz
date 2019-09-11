@@ -61,9 +61,14 @@ nav {
             flex: 1;
             text-align: center;
 
+            img {
+                display: inline-block;
+                width: 71px;
+                margin: 0 10px 0 0;
+            }
+
             p {
                 position: relative;
-                left: -20px;
                 font-family: $bebas;
                 font-weight: 900;
                 font-size: 4rem;
@@ -76,7 +81,7 @@ nav {
             width: 35px;
             height: 5px;
             margin-bottom: 5px;
-            background: #fff;
+            background: $green;
             border-radius: 3px;
             width: 35px;
         }

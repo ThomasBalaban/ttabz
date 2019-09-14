@@ -25,9 +25,9 @@
     {
         "projectType": "Web",
         "projectName": "Dicks Sporting Goods",
-        "projectDesc": "A short project, but a unique one for me! An early stage of my career, Wabtec had requested our Agency to create wireframes considering for all their regional location sites, which was roughly 100 or so. I went through, found the common and necessary parts of each site and created a wireframe to allow them to move forward with a solution based upon that wireframe. Soon after that I implemented a solution for 3D viewing on some of their tools based on JavaScript.",
-        "projectSite": "https://www.wabtec.com/",
-        "showCase": "Leading Transportation Technology",
+        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both I am happy to say that I am a part of their company. In the technology department I assist in developing and adding marketing strategies, a newly developed in house tool for our marketing teams built in angular, and redeveloping static pages to angular based pages.",
+        "projectSite": "https://dickssportinggoods.com",
+        "showCase": "Fitness matters",
         "featured": true,
         "techUsed": [
             { "tech": "CSS" },
@@ -48,8 +48,8 @@
     {
         "projectType": "Web",
         "projectName": "Golf Galaxy",
-        "projectDesc": "A short project, but a unique one for me! An early stage of my career, Wabtec had requested our Agency to create wireframes considering for all their regional location sites, which was roughly 100 or so. I went through, found the common and necessary parts of each site and created a wireframe to allow them to move forward with a solution based upon that wireframe. Soon after that I implemented a solution for 3D viewing on some of their tools based on JavaScript.",
-        "projectSite": "https://www.wabtec.com/",
+        "projectDesc": "Golf Galaxy is a company owned by Dicks Sporting Goods focused on golfing, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
+        "projectSite": "https://www.golfgalaxy.com/",
         "showCase": "Leading Transportation Technology",
         "featured": false,
         "techUsed": [
@@ -93,7 +93,7 @@
     {
         "projectType": "Web",
         "projectName": "Field And Stream",
-        "projectDesc": "A short project, but a unique one for me! An early stage of my career, Wabtec had requested our Agency to create wireframes considering for all their regional location sites, which was roughly 100 or so. I went through, found the common and necessary parts of each site and created a wireframe to allow them to move forward with a solution based upon that wireframe. Soon after that I implemented a solution for 3D viewing on some of their tools based on JavaScript.",
+        "projectDesc": "Field and Stream is a company owned by Dicks Sporting Goods focused on fishing and hunting, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I was very excited to work on this project as I was raised hunting and fishing and it was fun to work on a site devoted to those traditional values!  I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
         "projectSite": "https://www.wabtec.com/",
         "showCase": "Leading Transportation Technology",
         "featured": false,

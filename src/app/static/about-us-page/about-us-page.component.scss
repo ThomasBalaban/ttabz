@@ -1,0 +1,193 @@
+@import '../../../styles/helpers/vars.scss';
+@import '../../../styles/helpers/tools.scss';
+
+.logo {
+    background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position-y: 66%;
+    background-position-x: 50%;
+    padding: 15vh 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        font-size: 10rem;
+        font-weight: 900;
+        color: #ffffff;
+        @include bgGrad(#f2a713, #ff0068, 160deg);
+        @extend %textShadow;
+        padding: 3px 8px;
+        text-align: center;
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto 0;
+        display: inline-block;
+    }
+}
+
+.wedothings {
+    padding: 40px 0;
+    text-align: center;
+    background: #ffffff;
+
+    button {
+        margin: 0 auto;
+        transform: translateX(-50%);
+        @include bgGrad(#0db991, #a1ff5e, 148deg);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        padding: 5px 10px 5px;
+        border-radius: 3px;
+        border: none;
+        line-height: 1;
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        font-family: $bebas;
+        font-weight: 900;
+        letter-spacing: 0.15rem;
+        color: #ffffff;
+        @extend %textShadow;
+    }
+
+    .info {
+        p {
+            max-width: 860px;
+            margin: 0 auto;
+            font-size: 3rem;
+        }
+    }
+
+    .itemizedimages {
+        margin: 40px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .image {
+            position: relative;
+            margin: 0;
+            width: 100%;
+
+            @media(min-width: 485px) {
+                width: 50%;
+            }
+
+            @media(min-width: 845px) {
+                width: 25%;
+            }
+        }
+
+        h4 {
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -38%);
+            color: #ff0068;
+            font-size: 6rem;
+            font-weight: 900;
+            z-index: 2;
+        }
+
+        p {
+            position: absolute;
+            z-index: 2;
+            top: 62%;
+            left: 50%;
+            transform: translate(-50%, -62%);
+            width: 80%;
+        }
+
+        .background {
+            background: #ffffff;
+            opacity: 0.8;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+.peeps {
+    padding: 40px 0;
+    color: #ffffff;
+    text-align: center;
+    @include bgGrad(#191919, #2b2b2b, 148deg);
+    box-shadow: 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 1500px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        @media(min-width: 840px) {
+            flex-direction: row;
+        }
+
+        img {
+            @media(min-width: 840px){
+                width: 40%;
+            }
+        }
+
+        .info {
+            padding: 0 20px;
+
+            @media(min-width: 840px) {
+                padding: 0 40px 0 20px;
+                width: 60%;
+                text-align: right;
+            }
+
+            p {
+                margin: 10px 0 40px;
+            }
+        }
+    }
+}
+
+.people {
+    padding: 40px 0;
+    column-count: 1;
+    column-gap: 30px;
+    margin: 0 20px;
+    max-width: 1500px;
+
+    @media(min-width: 705px) {
+        column-count: 2;
+    }
+
+    @media(min-width: 1005px) {
+        column-count: 3;
+    }
+
+    @media(min-width: 1540px) {
+        column-count: 3;
+        margin: 0 auto;
+    }
+
+    .card {
+        @include bgGrad(#c010d3, #ff0068, 180deg);
+        border-radius: 3px;
+        margin: 0 0 30px;
+        padding: 5px;
+        box-shadow: 0px -2px 9px rgba(0, 0, 0, 0.3);
+
+        .person {
+            background: #ffffff;
+            box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            padding: 15px;
+            text-align: center;
+            break-inside: avoid;
+            width: 100%;
+        }
+    }
+
+}

@@ -12,4 +12,14 @@ export class AboutUsPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  openItem(item) {
+    const evTarget = item.target.closest('.image');
+
+    if ( evTarget.classList.contains('open') ) {
+      evTarget.classList.remove('open')
+    } else {
+      evTarget.classList.add('open')
+    }
+  }
+
 }

@@ -1,183 +1,99 @@
 @import '../../../styles/helpers/vars.scss';
 @import '../../../styles/helpers/tools.scss';
+@import '../../../styles/helpers/generics.scss';
 
-.home {
 
-    img {
-        width: 100%;
-    }
-
-    .toplogo {
-        position: relative;
-    }
-
-    .logo {
-        background: url('https://images.unsplash.com/photo-1447357704087-5de405e80f38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1617&q=80');
-        background-size: cover;
-        background-position-y: 66%;
-        background-position-x: 50%;
-        padding: 15vh 40px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        h1 {
-            font-size: 10rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            @include bgGrad(#f2a713, #ff0068, 160deg);
-            @extend %textShadow;
-            padding: 11px 31px 0px;
-            color: #ffffff;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 375px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #ffffff;
-            @include bgGrad(#c010d3, #ff0068, 180deg);
-            @extend %textShadow;
-            padding: 3px 8px;
-            text-align: center;
-            width: 100%;
-            max-width: 375px;
-            margin: 10px auto 0;
-            display: inline-block;
-        }
-    }
-
-    .skills {
-        font-size: 2rem;
-        margin: 0 0 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        span {
-            font-size: 4rem;
-            font-weight: 900;
-            font-family: $bebas;
-            color: #ffffff;
-            @include bgGrad(#c010d3, #ff0068, 180deg);
-            @extend %textShadow;
-            padding: 3px 8px;
-            margin: 3px;
-            word-wrap: none;
-            display: inline-block;
-        }
-    }
-}
-
-.intro {
-    padding: 20px;
-    background: #ffffff;
-    text-align: center;
-
-    @media(min-width: 760px) {
-        padding: 60px 20px;
-    }
-
-    p {
-        max-width: 860px;
-        margin: 0 auto;
-        font-size: 3rem;
-
-        @media(min-width: 760px) {
-            font-size: 4rem;
-        }
-    }
-}
-
-.botcolorbar {
+img {
     width: 100%;
-    height: 5px;
-    @include bgGrad(#f2a713, #ff0068, 160deg);
 }
 
-.botcolorbar2 {
+.toplogo {
+    position: relative;
+}
+
+.logo {
+    background: url('https://images.unsplash.com/photo-1447357704087-5de405e80f38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1617&q=80');
+    background-size: cover;
+    background-position-y: 66%;
+    background-position-x: 50%;
+    padding: 15vh 40px;
+    height: 100%;
     width: 100%;
-    height: 5px;
-    @include bgGrad(#c010d3, #ff0068, 180deg);
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-
-.intro-info {
-    color: #ffffff;
-    text-align: center;
-    @include bgGrad(#191919, #2b2b2b, 148deg);
-    box-shadow: 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
-
-    p {
-        padding: 20px;
-        font-size: 2.8rem;
-        line-height: 1.8;
-        max-width: 1080px;
+    h1 {
+        font-size: 10rem;
+        font-weight: 900;
+        letter-spacing: 3px;
+        @include bgGrad(#f2a713, #ff0068, 160deg);
+        @extend %textShadow;
+        padding: 11px 31px 0px;
+        color: #ffffff;
         margin: 0 auto;
+        width: 100%;
+        max-width: 375px;
+        text-align: center;
+    }
 
-        @media(min-width: 760px) {
-            font-size: 3.2rem;
-        }
+    h2 {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #ffffff;
+        @include bgGrad(#c010d3, #ff0068, 180deg);
+        @extend %textShadow;
+        padding: 3px 8px;
+        text-align: center;
+        width: 100%;
+        max-width: 375px;
+        margin: 10px auto 0;
+        display: inline-block;
     }
 }
+
+.skills {
+    font-size: 2rem;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+        font-size: 4rem;
+        font-weight: 900;
+        font-family: $bebas;
+        color: #ffffff;
+        @include bgGrad(#c010d3, #ff0068, 180deg);
+        @extend %textShadow;
+        padding: 3px 8px;
+        margin: 3px;
+        word-wrap: none;
+        display: inline-block;
+    }
+}
+
 
 .featured {
     text-align: center;
-    padding: 20px;
+    padding: 0 0 30px;
 
     @media(min-width: 1024px) and (min-height: 768px) {
-        height: 760px;
+        height: 810px;
     }
 
-    @media(min-width: 1024px) and (min-height: 768px) {
-        height: 720px;
+    h3 {
+        padding: 30px 0 0;
+        font-size: 7rem;
+
+        @media(min-width: 760px) {
+            font-size: 12rem;
+        }
     }
 
     .portfolioPiece {
         display: block;
-    }
-}
-
-.approach {
-    color: #ffffff;
-    text-align: center;
-    @include bgGrad(#191919, #2b2b2b, 148deg);
-    box-shadow: 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
-
-    p {
-        padding: 20px;
-        font-size: 2.8rem;
-        line-height: 1.8;
-        max-width: 1080px;
-        margin: 0 auto;
-
-        @media(min-width: 760px) {
-            font-size: 3.2rem;
-        }
-    }
-}
-
-.philo {
-    text-align: center;
-    background: #ffffff;
-    box-shadow: 0px -3px 5px 2px rgba(0, 0, 0, 0.2);
-
-    p {
-        padding: 20px;
-        font-size: 2.8rem;
-        line-height: 1.8;
-        max-width: 1080px;
-        margin: 0 auto;
-
-        @media(min-width: 760px) {
-            font-size: 3.2rem;
-        }
     }
 }

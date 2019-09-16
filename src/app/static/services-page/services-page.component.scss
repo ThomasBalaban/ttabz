@@ -1,5 +1,6 @@
 @import '../../../styles/helpers/vars.scss';
 @import '../../../styles/helpers/tools.scss';
+@import '../../../styles/helpers/generics.scss';
 
 .logo {
     background: url('https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80');
@@ -29,24 +30,7 @@
     }
 }
 
-.services {
-    padding: 40px 0;
-    text-align: center;
-    background: #ffffff;
-
-    .info {
-        p {
-            max-width: 860px;
-            margin: 0 auto;
-            font-size: 3rem;
-        }
-    }
-}
-
 .experience {
-    padding: 40px 0;
-    text-align: center;
-    background: #ffffff;
     display: flex;
     flex-direction: column;
 

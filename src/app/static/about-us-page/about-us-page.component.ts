@@ -16,9 +16,9 @@ export class AboutUsPageComponent implements OnInit {
     const evTarget = item.target.closest('.image');
 
     if ( evTarget.classList.contains('open') ) {
-      evTarget.classList.remove('open')
+      evTarget.classList.remove('open');
     } else {
-      evTarget.classList.add('open')
+      evTarget.classList.add('open');
     }
   }
 

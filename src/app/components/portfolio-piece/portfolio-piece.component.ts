@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, ElementRef, ViewChild, Renderer2  } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef, ViewChild, OnDestroy  } from '@angular/core';
 import { PortPieceService } from 'src/app/services/port-piece.service';
 import { PortPiece } from 'src/app/models/port-piece.model';
 import { Subscription } from 'rxjs';
@@ -9,15 +9,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./portfolio-piece.component.scss']
 })
 
-export class PortfolioPieceComponent implements OnInit {
-  selectedIndex: any;
-  mediaQuery$: Subscription;
-  activeMediaQuery: string;
-  desktop = false;
-  srcHeight: number;
-  srcWidth: number;
-
-  public portPieces: PortPiece[] = [];
+export class PortfolioPieceComponent implements OnInit, OnDestroy {
+  private desktop = false;
+  private srcHeight: number;
+  private srcWidth: number;
+  private portPieces: PortPiece[] = [];
   private portPieceSubscription: Subscription;
 
   @Input() piece;
@@ -34,7 +30,6 @@ export class PortfolioPieceComponent implements OnInit {
 
   constructor(
     private portPieceService: PortPieceService,
-    private rd: Renderer2
   ) {
     this.onResize();
   }
@@ -43,6 +38,10 @@ export class PortfolioPieceComponent implements OnInit {
     this.portPieceSubscription = this.portPieceService.getData().subscribe( (res: PortPiece[]) => {
       this.portPieces = res;
     });
+  }
+
+  ngOnDestroy() {
+    this.portPieceSubscription.unsubscribe();
   }
 
   checkForDesktop(width, height) {
@@ -58,19 +57,34 @@ export class PortfolioPieceComponent implements OnInit {
   }
 
   openPiece(event) {
-    const items: any = document.querySelectorAll('.portfolioPiece');
+    const backgroundT = this.background.nativeElement;
+    const eventTPiece = event.target.closest('.portfolioPiece');
 
-    if ( !event.target.closest('.portfolioPiece').classList.contains('fullscreen') ) {
-      for ( const item of items ) {
-        item.classList.remove('fullscreen');
-      }
-      event.target.closest('.portfolioPiece').classList.add('fullscreen');
-      this.background.nativeElement.style.display = 'block';
+    function openBackground() {
+      backgroundT.style.display = 'block';
+      backgroundT.classList.remove('closed');
+      backgroundT.classList.add('open');
+    }
+
+    if ( !eventTPiece.classList.contains('fullscreen') ) {
+      eventTPiece.classList.add('fullscreen');
+      openBackground();
     } else {
-      for ( const item of items ) {
-        item.classList.remove('fullscreen');
-        this.background.nativeElement.style.display = 'none';
-      }
+      eventTPiece.classList.add('closed');
+      eventTPiece.classList.remove('fullscreen');
+      backgroundT.classList.remove('open');
+
+      setTimeout( () => {
+        eventTPiece.classList.remove('closed');
+        backgroundT.classList.remove('open');
+        backgroundT.classList.add('closed');
+      }, 300);
+
+      setTimeout( () => {
+        eventTPiece.classList.remove('closed');
+        backgroundT.style.display = 'none';
+        backgroundT.classList.remove('closed');
+      }, 500);
     }
   }
 

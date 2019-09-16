@@ -36,7 +36,6 @@
 
     button {
         margin: 0 auto;
-        transform: translateX(-50%);
         @include bgGrad(#0db991, #a1ff5e, 148deg);
         box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
         padding: 5px 10px 5px;
@@ -78,13 +77,54 @@
             @media(min-width: 845px) {
                 width: 25%;
             }
+
+            &.open {
+
+                @media (pointer: coarse) {
+
+                    p {
+                        opacity: 1;
+                        top: 56%;
+                    }
+
+                    h4 {
+                        top: 38%;
+                        transform: translate(-50%, -38%);
+                    }
+
+                    .background {
+                        height: 100%;
+                    }
+                }
+            }
+
+            &:hover {
+
+                @media (pointer: fine) {
+    
+                    p {
+                        opacity: 1;
+                        top: 56%;
+                    }
+    
+                    h4 {
+                        top: 38%;
+                        transform: translate(-50%, -38%);
+                    }
+    
+                    .background {
+                        height: 100%;
+                    }
+                }
+            }
         }
 
         h4 {
             position: absolute;
-            top: 38%;
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, -38%);
+            transform: translate(-50%, -50%);
+            transition: all 0.2s ease;
             color: #ff0068;
             font-size: 6rem;
             font-weight: 900;
@@ -94,19 +134,24 @@
         p {
             position: absolute;
             z-index: 2;
-            top: 62%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -62%);
             width: 80%;
+            opacity: 0;
+            transition: all 0.2s ease;
         }
 
         .background {
             background: #ffffff;
             opacity: 0.8;
             position: absolute;
-            height: 100%;
+            height: 0;
+            top: 50%;
+            transform: translateY(-50%);
             width: 100%;
             z-index: 1;
+            transition: all 0.2s ease;
         }
     }
 }

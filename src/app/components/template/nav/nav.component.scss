@@ -85,7 +85,15 @@ nav {
                 background: none;
             }
 
+            @media(min-width: 830px) {
+                padding: 5px 10px 0px;
+            }
+
             @media(min-width: 930px) {
+                padding: 5px 15px 0px;
+            }
+
+            @media(min-width: 990px) {
                 padding: 5px 30px 0px;
             }
 
@@ -162,8 +170,12 @@ nav {
                 fill: currentColor;
                 height: 100%;
                 width: auto;
-                margin: 0 0 0 15px;
+                margin: 0 0 0 45px;
                 transition: all 0.2s ease;
+
+                @media(min-width: 769px) {
+                    margin: 0 0 0 20px;
+                }
             }
         }
 

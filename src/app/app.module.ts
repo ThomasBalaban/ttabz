@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -12,6 +11,7 @@ import { ServicesPageComponent } from './static/services-page/services-page.comp
 import { ContactPageComponent } from './static/contact-page/contact-page.component';
 import { AboutUsPageComponent } from './static/about-us-page/about-us-page.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

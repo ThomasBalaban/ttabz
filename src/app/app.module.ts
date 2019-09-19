@@ -12,6 +12,7 @@ import { ContactPageComponent } from './static/contact-page/contact-page.compone
 import { AboutUsPageComponent } from './static/about-us-page/about-us-page.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactFormComponent } from './components/template/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ServicesPageComponent,
     ContactPageComponent,
     AboutUsPageComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

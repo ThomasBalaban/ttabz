@@ -5,6 +5,7 @@
         "projectDesc": "A project close to my heart, I had grown up on Fred Rogers the same as everyone in my generation! When we got the project, I got to meet the lead of his brand, and work with them on a design. After the design was completed I had built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal as they asked for easy continuous support.",
         "projectSite": "https://www.fredrogers.org/",
         "showCase": "A Friendly Neighborhood",
+        "featured": true,
         "techUsed": [
             { "tech": "PHP" },
             { "tech": "JavaScript" },
@@ -15,49 +16,233 @@
         "displayedImage": [
             { 
                 "imageName": "The Test Image 1",
-                "imageUrl": "https://www.fredrogers.org/img/rollovers/home-dtn.jpg",
+                "imageUrl": "https://images.unsplash.com/photo-1555424221-250de2a343ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1643&q=80",
                 "imageAlt": "Test Image 1" 
-            },
-            { 
-                "imageName": "The Test Image 2",
-                "imageUrl": "test2.png",
-                "imageAlt": "Test Image 2" 
-            },
-            { 
-                "imageName": "The Test Image 3",
-                "imageUrl": "test3.png",
-                "imageAlt": "Test Image 3" 
             }
         ]
     }, 
+
     {
         "projectType": "Web",
-        "projectName": "Fred Rogers",
-        "projectDesc": "A project close to my heart, I had grown up on Fred Rogers the same as everyone in my generation! When we got the project, I got to meet the lead of his brand, and work with them on a design. After the design was completed I had built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal as they asked for easy continuous support.",
-        "projectSite": "https://www.fredrogers.org/",
-        "showCase": "A Friendly Neighborhood",
+        "projectName": "Dicks Sporting Goods",
+        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both I am happy to say that I am a part of their company. In the technology department I assist in developing and adding marketing strategies, a newly developed in house tool for our marketing teams built in angular, and redeveloping static pages to angular based pages.",
+        "projectSite": "https://dickssportinggoods.com",
+        "showCase": "Fitness matters",
+        "featured": true,
         "techUsed": [
-            { "tech": "PHP" },
-            { "tech": "JavaScript" },
-            { "tech": "Drupal" },
             { "tech": "CSS" },
+            { "tech": "HTML" },
+            { "tech": "ANGULAR" },
+            { "tech": "DESIGN" },
+            { "tech": "Javascript" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Golf Galaxy",
+        "projectDesc": "Golf Galaxy is a company owned by Dicks Sporting Goods focused on golfing, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
+        "projectSite": "https://www.golfgalaxy.com/",
+        "showCase": "Leading Transportation Technology",
+        "featured": false,
+        "techUsed": [
+            { "tech": "Templating" },
+            { "tech": "Wireframing" },
+            { "tech": "Javascript" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1538423070486-9292881ea10a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1246&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Pennsylvania Lottery",
+        "projectDesc": "The PA Lottery was built before I was brought on, however the amount of legacy code and outdated or broken CSS was something we had to find solutions for. I have been a part of the team pushing forward on cleaning it up and making the site more maintainable for the ever-growing web presence. Marketing on the site updates on strict schedules, which were often sudden changes,  requiring solutions that allowed us to update as needed with the least amount of downtime. Along with full time support of the website,I have also created marketing emails, and an automated Style Guide that is ran by Handlebars.js to ensure that the future solutions can be as clean as possible. Using the Style Guide has led to massive improvements of development time to handle the ongoing revamp and rebuilds of the site and components!",
+        "projectSite": "https://www.palottery.state.pa.us",
+        "showCase": "Benefits Older Pennsylvanians Every Day",
+        "featured": true,
+        "techUsed": [
+            { "tech": "JavaScript" },
+            { "tech": "Ajax" },
+            { "tech": "CSS" },
+            { "tech": "HTML" },
+            { "tech": "Emails" },
+            { "tech": "Design" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1517085908802-f56a43681c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1603&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Field And Stream",
+        "projectDesc": "Field and Stream is a company owned by Dicks Sporting Goods focused on fishing and hunting, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I was very excited to work on this project as I was raised hunting and fishing and it was fun to work on a site devoted to those traditional values!  I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
+        "projectSite": "https://www.wabtec.com/",
+        "showCase": "Leading Transportation Technology",
+        "featured": false,
+        "techUsed": [
+            { "tech": "Templating" },
+            { "tech": "Wireframing" },
+            { "tech": "Javascript" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1506939812545-994835be1bdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Women of color network",
+        "projectDesc": "Foundations supporting the communities trying to escape violence and trying to help those in need hold a special place in my heart. When we were approached by the WOCN to develop their new site we took it without a second though! They already had a design and the content prepared from another group, we took that content and found a solution for it within WordPress that way the site could receive continuous updates from them as needed. I developed a WordPress template, and found the proper plugins to help them reach their goal! Has been redesigned since we took on the project.",
+        "projectSite": "https://wocninc.org/",
+        "showCase": "Wellness and Leadership",
+        "featured": false,
+        "techUsed": [
+            { "tech": "Wordpress" },
+            { "tech": "Ajax" },
+            { "tech": "PHP" },
             { "tech": "HTML" }
         ],
         "displayedImage": [
             { 
                 "imageName": "The Test Image 1",
-                "imageUrl": "https://www.fredrogers.org/img/rollovers/home-dtn.jpg",
+                "imageUrl": "https://images.unsplash.com/photo-1493655161922-ef98929de9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
                 "imageAlt": "Test Image 1" 
-            },
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Mylan",
+        "projectDesc": "At my time at Ciber, I was full time supporting Mylan's projects. At the time they had an English website and that was needing a solution to move the websites design to support other languages. I helped them reach that goal by making solutions and choices with a small team of designers and backend architects. After the creation of a template that would support other languages, we implemented the HTML into SiteCore. After the creation of several languages, I had gone through and revamped mobile to ensure it could outreach to the maximum amount of people.",
+        "projectSite": "https://www.mylan.com/",
+        "showCase": "Putting Patients First",
+        "featured": false,
+        "techUsed": [
+            { "tech": "SiteCore" },
+            { "tech": "CSS" },
+            { "tech": "ASP.Net" },
+            { "tech": "HTML" },
+            { "tech": "JavaScript" }
+        ],
+        "displayedImage": [
             { 
-                "imageName": "The Test Image 2",
-                "imageUrl": "test2.png",
-                "imageAlt": "Test Image 2" 
-            },
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1635&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Epipen",
+        "projectDesc": "After helping support and create solutions for Mylan.com I was asked to help support EpiPen, Mylan's leading product. A backend was created along with templates at this point of the projects life, I helped the team get to the finish line by fixing and creating new JavaScript solutions connecting to the back-end API. I helped and gave continuous support helping them create a mobile solution for maximum customer help!",
+        "projectSite": "https://www.epipen.com/en",
+        "showCase": "Arm Yourself for a Reaction.",
+        "featured": false,
+        "techUsed": [
+            { "tech": "SiteCore" },
+            { "tech": "CSS" },
+            { "tech": "ASP.Net" },
+            { "tech": "HTML" },
+            { "tech": "JavaScript" },
+            { "tech": "Entity Framework" },
+            { "tech": "Ajax" }
+        ],
+        "displayedImage": [
             { 
-                "imageName": "The Test Image 3",
-                "imageUrl": "test3.png",
-                "imageAlt": "Test Image 3" 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1556741533-e228ee50f8b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "United Refactories Co",
+        "projectDesc": "At the beginning of my time at the Agency that created the URC website I was tasked to wrap up the project. I went through and improved the SEO in the WordPress side of things and cleaned up and condensed the CSS to increase load times.",
+        "projectSite": "https://urc4u.com/",
+        "showCase": "Innovative Refactories",
+        "featured": false,
+        "techUsed": [
+            { "tech": "CSS" },
+            { "tech": "HTML" },
+            { "tech": "Wordpress" },
+            { "tech": "SEO" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1528717384022-f8d665c86909?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Web",
+        "projectName": "Center Rock",
+        "projectDesc": "This was my first project as an intern, and my first 'real life' experience with web development. Our agency chose to use WordPress due to the updating nature of the company with products, offers, news, and services. I created the original WordPress site using a pre-existing template and grabbing plugins that were needed to get a rough draft done. After the initial rough draft was complete, I had gone and cleaned up parts of the JavaScript, CSS, and the PHP that were from the template and plugins to match the client approved designs. It was a great way to hit the ground running!",
+        "projectSite": "https://centerrock.com/",
+        "showCase": "Raising The Bar",
+        "featured": false,
+        "techUsed": [
+            { "tech": "CSS" },
+            { "tech": "HTML" },
+            { "tech": "Wordpress" },
+            { "tech": "Javascript" },
+            { "tech": "PHP" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1541587943171-46b1eacd11fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+                "imageAlt": "Test Image 1" 
+            }
+        ]
+    },
+
+    {
+        "projectType": "Planning",
+        "projectName": "Wabtec",
+        "projectDesc": "A short project, but a unique one for me! An early stage of my career, Wabtec had requested our Agency to create wireframes considering for all their regional location sites, which was roughly 100 or so. I went through, found the common and necessary parts of each site and created a wireframe to allow them to move forward with a solution based upon that wireframe. Soon after that I implemented a solution for 3D viewing on some of their tools based on JavaScript.",
+        "projectSite": "https://www.wabtec.com/",
+        "showCase": "Leading Transportation Technology",
+        "featured": false,
+        "techUsed": [
+            { "tech": "Templating" },
+            { "tech": "Wireframing" },
+            { "tech": "Javascript" }
+        ],
+        "displayedImage": [
+            { 
+                "imageName": "The Test Image 1",
+                "imageUrl": "https://images.unsplash.com/photo-1434871619871-1f315a50efba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80",
+                "imageAlt": "Test Image 1" 
             }
         ]
     }

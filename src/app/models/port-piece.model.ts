@@ -7,6 +7,7 @@ export class PortPiece {
     projectDesc: string;
     projectSite: string;
     showCase: string;
+    featured: boolean;
     techUsed: PortPieceTechUsed[];
     displayedImage: PortPieceDisplayedImage[];
 }

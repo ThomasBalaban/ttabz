@@ -16,7 +16,9 @@ export class NavComponent implements OnInit {
   }
 
   openNav() {
-    this.active = !this.active;
+    if (window.innerWidth < 769 ) {
+      this.active = !this.active;
+    }
   }
 
 }

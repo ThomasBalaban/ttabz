@@ -1,90 +1,402 @@
 @import '../../../styles/helpers/vars.scss';
+@import '../../../styles/helpers/tools.scss';
+
+@keyframes backgroundShow {
+    0% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@keyframes backgroundHide {
+    0% {
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes fullScreenPiece {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes closeFullScreen {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.portfolio {
+    padding: 20px 20px 0;
+    width: 100%;
+    column-count: 1;
+    column-gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: block;
+
+    @media(min-width: 670px) { 
+        column-count: 2;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 40px 40px;
+        column-count: 3;
+    }
+
+    .background {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #e6e6e6;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        display: none;
+        opacity: 1;
+
+        &.open {
+            animation: backgroundShow 0.2s forwards;
+        }
+
+        &.closed {
+            animation: backgroundHide 0.5s forwards;
+        }
+    }
+} 
 
 .portfolioPiece {
-    margin: 20px 20px 0;
+    break-inside: avoid;
+    transition: all 0.1s ease;
+    margin: 0 0 20px;
 
-    .imageDisplay {
-        width: 100%;
+    @media(min-width: 1024px),(max-height: 768px) {
+        &.hovered {
+            transform: scale(1.05) translateZ(0);
+            transform-origin: top center;
+        }
 
-        img {
-            display: block;
-            height: auto;
-            width: 85%;
-            margin: 0 auto;
+        &.item-hovered:not(.hovered) {
+            transform: scale(0.95);
         }
     }
 
-    .card {
-        background: #ffffff;
-        padding: 20px 0 0;
-        margin: 0 0;
+    &.closed {
+        top: 0;
+        animation: closeFullScreen 0.5s forwards;
+    }
+
+    &.fullscreen {
+        top: 100%;
+        animation: fullScreenPiece 0.5s ease forwards 0.3s;
+    }
+
+    &.closed, &.fullscreen {
+        position: fixed;
+        margin: calc(2vh + 80px) 1.5vw 2vh;
+        height: calc(96vh - 80px);
+        background: #fff;
+        left: 0;
+        width: 96vw;
+        z-index: 2;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+
+        @media(min-width: 1024px),(max-height: 768px) {
+            &.hovered {
+                transform: scale(1);
+            }
+        }
+
+        .imageHolder {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            .cardImage {
+                width: 101%;
+                height: 101%;
+                margin: 0;
+                right: 0;
+                position: absolute;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .learn-more {
+                display: none;
+            }
+
+            .close {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .card-container {
+            width: 40%;
+            height: calc(100vh - (4vh + 80px));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            background: #ffffff;
+            position: relative;
+            z-index: 2;
+            transform: scale(1) translateZ(0);
+
+            .card {
+                top: 0;
+                box-shadow: none;
+                border-radius: 0;
+                width: 100%;
+                left: 0;
+
+                .card-info {
+                    box-shadow: none;
+
+                    .card-info-inner {
+                        display: inline-block;
+
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .card-footer {
+                top: 0;
+                padding: 0;
+                width: 100%;
+                left: 0;
+
+
+                .tech {
+                    padding: 3px 0;
+                }
+            }
+        }
+    }
+}
+
+.imageHolder {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    z-index: 0;
+    
+    .cardImage {
+        width: 88%;
+        height: 100%;
+        margin: 0 6%;
         border-radius: 3px;
-        position: relative;
-        top: -10px;
-        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+        transform: scale(1) translateZ(0);
+    }
 
-        .card-info {
-            margin: 10px 0 0;
-            background: #f7f6f6;
-            padding: 5px 0;
+    .learn-more {
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 50%;
+        transform: translateX(-50%);
+        @include bgGrad(#0db991, #a1ff5e, 148deg);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        padding: 5px 10px 5px;
+        border-radius: 3px;
+        border: none;
+        line-height: 1;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-family: $bebas;
+        font-weight: 900;
+        letter-spacing: 0.15rem;
+        color: #ffffff;
+        @extend %textShadow;
 
-            .icon-open {
-                color: $green;
-                font-size: 5rem;
-            }
-
-            .icon-close {
-                font-size: 4.2rem;
-                margin: 4px 0px 8px;
-                color: #f7f6f6;
-                background: $green;
-                border-radius: 50px;
-            }
-
-            .card-info-inner {
-                background: #f7f6f6;
-                border-radius: 3px;
-                transition: all 0.5s ease;
-
-                &.inactive {
-                    height: 0;
-                    overflow: hidden;
-                }
-                
-                &.active {
-                    height: 400px;
-                    overflow-y: scroll;
-                }
-            }
+        &:hover {
+            cursor: pointer;
         }
     }
 
-    .card-footer {
+    .close {
+        display: none;
+        cursor: pointer;
         background: #0db991;
-        background: linear-gradient(148deg, #0db991 0%,#a1ff5e 100%);
+        border: none;
+        color: #ffffff;
+        padding: 3px 5px;
+
+        i {
+            font-size: 4rem;
+        }
+    }
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px 0 0;
+    margin: 0 0;
+    border-radius: 3px;
+    position: relative;
+    top: -10px;
+    box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+    text-align: center;
+
+    h3 a {
+        padding: 0 20px;
+        margin: 10px 0 5px;
+        line-height: 0.85;
+        font-size: 5rem;
+        color: $green;
+        text-decoration: none;
+        display: block;
+    }
+
+    h4 {
+        padding: 0 20px;
+        font-size: 3rem;
+    }
+
+    .card-info {
+        background: #fff;
         position: relative;
-        top: -10px;
-        padding: 10px 0 0;
-        box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+        padding: 20px 0 0;
+        box-shadow: inset 0px -23px 15px -23px rgba(0,0,0,0.75);
 
-        .tech {
-            display: block;
-            line-height: 2;
-            padding: 0 10px;
-        }
+        .card-info-inner {
+            transition: all 0.5s ease;
+ 
+            &.active {
+                max-height: 800px;
+                overflow-y: scroll;
 
-        span {
-            display: inline-block;
-            background: red;
-            margin: 5px;
-            padding: 2px 5px;
-            border-radius: 3px;
-            line-height: 1.6;
-        }
+                @media(min-width: 670px){ 
+                    max-height: inherit;
+                }
+            }
 
-        p {
-            background: blue;
-            padding: 10px;
+            &.inactive {
+                max-height: 65px;
+                overflow: hidden;
+
+                @media(min-width: 670px){ 
+                    max-height: inherit;
+                }
+
+                @media(min-width: 1024px) and (min-height: 768px) {
+                    display: none;
+                }
+            }
+
+            p {
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            a {
+                color: $green;
+                text-decoration: none;
+                display: block;
+                font-size: 3rem;
+                font-family: $bebas;
+                margin: 15px 0 20px;
+            }
         }
+    }
+}
+
+.icon-container {
+    padding: 0;
+    height: 40px;
+    @include bgGrad(#f2a713, #ff0068, 160deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: 670px){ 
+        display: none;
+    }
+
+    i {
+        color: #a1ff5e;
+        font-size: 7rem;
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        @extend %textShadow;
+    }
+}
+
+.card-footer {
+    position: relative;
+    @include bgGrad(#0db991, #a1ff5e, 148deg);
+    top: -10px;
+    padding: 3px 0 0;
+    box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.2);
+    text-align: center;
+
+    .tech {
+        display: block;
+        padding: 0 10px 3px;
+    }
+
+    span {
+        display: inline-block;
+        @include bgGrad(#aa09ec, #6e00ff, 175deg);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+        margin: 5px;
+        padding: 6px 10px 3px;
+        border-radius: 3px;
+        line-height: 1;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-family: $bebas;
+        font-weight: 900;
+        letter-spacing: 0.15rem;
+        color: #ffffff;
+        @extend %textShadow;
+    }
+
+    h5 {
+        @include bgGrad(#c010d3, #ff0068, 180deg);
+        text-align: center;
+        padding: 10px;
+        font-weight: 900;
+        font-size: 3.6rem;
+        color: #ffffff;
+        letter-spacing: 0.15rem;
+        box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+        @extend %textShadow;
     }
 }

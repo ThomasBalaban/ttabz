@@ -7,15 +7,15 @@ import { ContactPageComponent } from './static/contact-page/contact-page.compone
 import { ServicesPageComponent } from './static/services-page/services-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'portfolio', component: PortfolioPageComponent },
-  { path: 'about', component: AboutUsPageComponent },
-  { path: 'contact', component: ContactPageComponent },
-  { path: 'services', component: ServicesPageComponent },
+  { path: '', component: HomePageComponent, data: { page: 'home'} },
+  { path: 'portfolio', component: PortfolioPageComponent, data: { page: 'port'} },
+  { path: 'about', component: AboutUsPageComponent, data: { page: 'about'} },
+  { path: 'contact', component: ContactPageComponent, data: { page: 'contact'} },
+  { path: 'services', component: ServicesPageComponent, data: { page: 'service'} },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 

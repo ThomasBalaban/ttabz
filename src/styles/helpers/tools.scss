@@ -1,1 +1,12 @@
-// globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+%textShadow {
+    text-shadow:
+            -1px -1px 0 rgba(0, 0, 0, 0.6),  
+            1px -1px 0 rgba(0, 0, 0, 0.6),
+            -1px 1px 0 rgba(0, 0, 0, 0.6),
+            1px 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+@mixin bgGrad($mainCol, $sideCol, $ang) {
+    background: $mainCol;
+    background: linear-gradient($ang, $mainCol 0%, $sideCol 100%);
+}

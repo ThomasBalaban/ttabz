@@ -1,13 +1,21 @@
-<div class="contact-information">
-  <div class="background">
-    <h3>Reach Out Directly</h3>
-    <p>If you have any questions or need some help, you can call, text, or email us!</p>
+<div class="contact-component">
+  <div class="contact-information">
+    <h3>How Can I Help?</h3>
+    <p>If you would like a more personal approach please feel free to call, text, or email!</p>
     <div class="call">
       <div class="icons">
         <i class="material-icons">phone_android</i>
       </div>
       <div class="info">
         <p>724-691-8106</p>
+      </div>
+    </div>
+    <div class="resume">
+      <div class="icons">
+        <i class="material-icons">assignment</i>
+      </div>
+      <div class="info">
+        <p><a target="_blank" href="./assets/thomas_balaban_resume.pdf">Resume</a></p>
       </div>
     </div>
     <div class="email">
@@ -19,31 +27,80 @@
       </div>
     </div>
   </div>
-</div>
 
-<div id="frmContact">
-  <div class="background">
-    <h3>The ol' fashion</h3>
-    <p>If you have any questions or need some help, you can call, text, or email us!</p>
+  <div class="contact-form">
     <div id="mail-status"></div>
-    <div>
-        <label>Name</label><span id="userName-info" class="info"></span>
-        <input type="text" name="userName" id="userName" class="demoInputBox">
-    </div>
-    <div>
-        <label>Email</label><span id="userEmail-info" class="info"></span>
-        <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
-    </div>
-    <div>
-        <label>Subject</label><span id="subject-info" class="info"></span>
-        <input type="text" name="subject" id="subject" class="demoInputBox">
-    </div>
-    <div>
-        <label>Message</label><span id="content-info" class="info"></span>
-        <textarea name="content" id="content" class="demoInputBox" cols="30" rows="6"></textarea>
-    </div>
-    <div>
-        <button name="submit" class="btnAction" onClick="sendContact();">Send</button>
-    </div>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
+      <div class="error" [ngClass]="{'active': name.touched, 'required': name.errors?.required, 'pattern': name.errors?.pattern}">
+        <ng-container *ngIf="name.touched">
+          <p *ngIf="name.errors?.required">Required Field</p>
+          <p *ngIf="name.errors?.pattern">Please Enter A Valid Name</p>
+        </ng-container>
+      </div>
+      <div class="form-field"> 
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          ngModel
+          #name="ngModel"
+          pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
+          required>
+      </div>
+
+      <div class="error" [ngClass]="{'active': email.touched, 'required': email.errors?.required, 'pattern': email.errors?.pattern}">
+        <ng-container *ngIf="email.touched">
+          <p *ngIf="email.errors?.required">Required Field</p>
+          <p *ngIf="email.errors?.pattern">Please Enter A Valid Email</p>
+        </ng-container>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input 
+          type="email"
+          name="email"
+          ngModel
+          #email="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          required>
+      </div>
+
+      <div class="error" [ngClass]="{'active': subject.touched, 'required': subject.errors?.required}">
+        <ng-container *ngIf="subject.touched">
+          <p *ngIf="subject.errors?.required">Required Field</p>
+        </ng-container>
+      </div>
+      <div class="form-field">
+        <label for="subject">Subject</label>
+        <input 
+          type="text"
+          name="subject"
+          ngModel
+          #subject="ngModel"
+          required>
+      </div>
+
+      <div class="error" [ngClass]="{'active': content.touched, 'required': content.errors?.required}">
+        <ng-container *ngIf="content.touched">
+          <p *ngIf="content.errors?.required">Required Field</p>
+        </ng-container>
+      </div>
+      <div class="form-field">
+        <label class="message" for="content">Message</label>
+        <textarea
+          name="content"
+          ngModel
+          #content="ngModel"
+          required>
+        </textarea>
+      </div>
+
+      <button [ngClass]="contactForm.invalid ? 'inactive' : 'active'" [disabled]="contactForm.invalid">
+        <ng-container *ngIf="contactForm.invalid; else showSend">Complete Form</ng-container>
+        <ng-template #showSend>Send</ng-template >
+      </button>
+
+    </form>
   </div>
 </div>

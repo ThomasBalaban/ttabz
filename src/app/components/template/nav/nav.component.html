@@ -1,7 +1,7 @@
 <nav>
   <div class='topcolorbar'></div>
   <div class="nav" [ngClass]='active ? "active" : "inactive"'>
-    <div class='menu-button' (click)='openNav()'>
+    <div class='menu-button'>
       <div class="logo" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <a routerLink="/">
           <svg viewBox="0 0 262 104">
@@ -59,9 +59,10 @@
               c2.801-11.5-16.701-21.365-25.938-22.063c0.01,0.007,0.02,0.014,0.028,0.02C133.237,77.018,136.043,81.054,137.98,85.382z"/>
             </g>
           </svg>
+          <h1>Thomas Balaban</h1>
         </a>
       </div>
-      <div class="ham">
+      <div class="ham" (click)='openNav()'>
         <span></span>
         <span></span>
         <span></span>

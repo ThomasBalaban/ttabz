@@ -21,7 +21,7 @@
     flex-direction: column;
 
     h2 {
-        font-size: 10rem;
+        font-size: 6rem;
         font-weight: 900;
         color: #ffffff;
         @include bgGrad(#f2a713, #ff0068, 160deg);
@@ -32,6 +32,10 @@
         max-width: 375px;
         margin: 0 auto 0;
         display: inline-block;
+
+        @media(min-width: 768px) {
+            font-size: 10rem;
+        }
     }
 }
 
@@ -62,7 +66,7 @@
         @include bgGrad(#2b2b2b, #2f2f2f, 148deg);
         color: #ffffff;
         width: 100%;
-        padding: 30px 20px;
+        padding: 30px 7.5%;
         border-bottom: 4px solid #404040;
 
         &:last-child {
@@ -95,6 +99,7 @@
 
         @media(min-width: 600px) {
             width: 50%;
+            padding: 30px 20px;
 
             &:nth-child(n+4) {
                 border-bottom: none;
@@ -124,21 +129,21 @@
             }
         }
 
+        h5 {
+            font-size: 2.6rem;
+        }
+
+        p {
+            width: 100%;
+        }
+
         .svg-container {
             position: relative;
-            width: 100%;
-            max-width: 375px;
+            width: 80%;
             margin: 0 auto 40px;
 
             @media(min-width: 600px) {
-                height: 70%;
-                vertical-align: middle;
-
-                svg {
-                    top: 50%;
-                    transform: translateY(-50%);
-                    position: relative;
-                }
+                height: 25vh;
             }
 
             svg {

@@ -67,7 +67,7 @@ nav {
         }
 
         li {
-            height: 20%;
+            height: 25%;
             width: 100%;
             display: flex;
             align-items: center;
@@ -121,7 +121,7 @@ nav {
             }
 
             a {
-                font-size: 4rem;
+                font-size: 3.4rem;
                 font-family: $bebas;
                 font-weight: 900;
                 transition: all 0.2s ease;
@@ -154,7 +154,7 @@ nav {
             height: 43px;
 
             &.active {
-                svg {
+                svg, h1 {
                     color: #60ffda;
                 }
             }
@@ -166,16 +166,47 @@ nav {
                 }
             }
 
+            > a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                max-width: 260px;
+                height: 100%;
+
+                @media(min-width: 769px) {
+                    max-width: none;
+                }
+
+                svg {
+                    width: 28%;
+
+                    @media(min-width: 769px) {
+                        margin: 0 3%;
+                    }
+                }
+
+                h1 {
+                    width: 66%;
+                    font-size: 2.4rem;
+                    padding: 3px 0 0;
+                    transition: all 0.2s ease;
+
+                    @media(min-width: 769px) {
+                        font-size: 3.4rem;
+
+                        &:hover {
+                            color: #39e0b9;
+                            transform: scale(1.01);
+                        }
+                    }
+                }
+            }
+
             svg {
                 fill: currentColor;
                 height: 100%;
                 width: auto;
-                margin: 0 0 0 45px;
                 transition: all 0.2s ease;
-
-                @media(min-width: 769px) {
-                    margin: 0 0 0 20px;
-                }
             }
         }
 

@@ -28,8 +28,9 @@ img {
     justify-content: center;
     flex-direction: column;
 
-    h1 {
-        font-size: 10rem;
+    h2 {
+        font-size: 6rem;
+        line-height: 0.8;
         font-weight: 900;
         letter-spacing: 3px;
         @include bgGrad(#f2a713, #ff0068, 160deg);
@@ -40,12 +41,21 @@ img {
         width: 100%;
         max-width: 375px;
         text-align: center;
+        padding: 10px 0 3px;
+
+        @media(min-width: 768px) {
+            font-size: 10rem;
+            max-width: 600px;
+            padding: 12px 0 3px;
+        }
     }
 
-    h2 {
-        font-size: 4rem;
+    h3 {
+        font-size: 3rem;
+        line-height: 0.85;
         font-weight: 900;
         color: #ffffff;
+        letter-spacing: 1px;
         @include bgGrad(#c010d3, #ff0068, 180deg);
         @extend %textShadow;
         padding: 3px 8px;
@@ -54,28 +64,41 @@ img {
         max-width: 375px;
         margin: 10px auto 0;
         display: inline-block;
+        padding: 6px 0 3px;
+
+        @media(min-width: 768px) {
+            font-size: 6rem;
+            max-width: 600px;
+            padding: 10px 0 3px;
+        }
     }
 }
 
 .skills {
     font-size: 2rem;
-    margin: 0 0 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 
     span {
-        font-size: 4rem;
+        width: 85%;
+        font-size: 3rem;
         font-weight: 900;
         font-family: $bebas;
         color: #ffffff;
         @include bgGrad(#c010d3, #ff0068, 180deg);
         @extend %textShadow;
-        padding: 3px 8px;
+        padding: 6px 0 3px;
         margin: 3px;
         word-wrap: none;
         display: inline-block;
+
+        @media(min-width: 768px) {
+            width: auto;
+            padding: 6px 10px 3px;
+        }
     }
 }
 
@@ -85,15 +108,15 @@ img {
     padding: 0 0 30px;
 
     @media(min-width: 1024px) and (min-height: 768px) {
-        height: 810px;
+        height: 780px;
     }
 
     h3 {
-        padding: 30px 0 0;
-        font-size: 7rem;
+        padding: 40px 0 0;
+        font-size: 5rem;
 
         @media(min-width: 760px) {
-            font-size: 12rem;
+            font-size: 7rem;
         }
     }
 

@@ -73,7 +73,11 @@ footer {
         color: #929292;
         font-family: "Bebas Neue", "Arial Thin", "Helvetica", "Arial", sans-serif;
         font-weight: 900;
-        font-size: 3rem;
+        font-size: 2rem;
+
+        @media(min-width: 375px) {
+            font-size: 3rem;
+        }
     }
 
     i {

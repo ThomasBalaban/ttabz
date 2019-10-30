@@ -34,22 +34,35 @@
     padding: 20px 0;
 
     p {
-        max-width: 1460px;
-        padding: 0 20px;
-        margin: 0 auto;
-        font-size: 3rem;
+        width: 85%;
+        margin: 20px auto;
+        font-size: 2rem;
+        line-height: 1.4;
 
-        @media(min-width: 760px) {
-            font-size: 4rem;
+        a {
+            text-transform: inherit;
+            text-decoration: underline;
+        }
+
+        @media(min-width: 768px) {
+            font-size: 2.4rem;
         }
     }
 
     h3 {
-        padding: 30px 20px 10px;
-        font-size: 7rem;
+        padding: 20px 0 0;
+        font-size: 5rem;
 
-        @media(min-width: 760px) {
-            font-size: 12rem;
+        @media(min-width: 768px) {
+            font-size: 7rem;
+        }
+    }
+
+    li {
+        font-size: 2rem;
+
+        @media(min-width: 768px) {
+            font-size: 2.4rem;
         }
     }
 
@@ -63,11 +76,11 @@
         padding: 0;
 
         .topbar {
-            margin: 0 0 30px;
+            margin: 0 0 20px;
         }
 
         .botbar {
-            margin: 35px 0 0;
+            margin: 40px 0 0;
         }
     }
 }
@@ -82,4 +95,14 @@
     width: 100%;
     height: 5px;
     @include bgGrad(#c010d3, #ff0068, 180deg);
+}
+
+ul {
+    width: 85%;
+    margin: 0 auto;
+
+    li {
+        list-style: disc;
+        list-style-position: inside;
+    }
 }

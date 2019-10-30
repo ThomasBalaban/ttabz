@@ -279,15 +279,23 @@
         padding: 0 20px;
         margin: 10px 0 5px;
         line-height: 0.85;
-        font-size: 5rem;
+        font-size: 4rem;
         color: $green;
         text-decoration: none;
         display: block;
+
+        @media(min-width: 768px){ 
+            font-size: 5.4rem;
+        }
     }
 
     h4 {
         padding: 0 20px;
         font-size: 3rem;
+
+        @media(min-width: 768px){ 
+            font-size: 4rem;
+        }
     }
 
     .card-info {
@@ -324,6 +332,11 @@
             p {
                 text-align: center;
                 padding: 0 20px;
+                line-height: 1.4;
+
+                @media(min-width: 768px){ 
+                    font-size: 2.4rem;
+                }
             }
 
             a {

@@ -223,4 +223,24 @@
             @include bgGrad(#0db991, #a1ff5e, 148deg);
         }
     }
+
+    h4 {
+        font-size: 3rem;
+        margin: 20px 0 0;
+
+        @media(min-width: 960px) {
+            margin: 10px 0 0;
+            font-size: 4rem;
+            text-align: left;
+        }
+    }
+
+    h5 {
+        font-size: 2rem;
+        
+        @media(min-width: 960px) {
+            font-size: 3rem;
+            text-align: left;
+        }
+    }
 }

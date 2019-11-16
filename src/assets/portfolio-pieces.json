@@ -2,7 +2,7 @@
     {
         "projectType": "Web",
         "projectName": "Fred Rogers",
-        "projectDesc": "A project close to my heart, I had grown up on Fred Rogers the same as everyone in my generation! When we got the project, I got to meet the lead of his brand, and work with them on a design. After the design was completed I had built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal as they asked for easy continuous support.",
+        "projectDesc": "A project close to my heart, I had grown up on Fred Rogers as did everyone in my generation! When we got the project, I got to meet the lead of their brand, and work with them on a design. After the design was completed I built components requiring JavaScript to ensure their design needs were met. I built the rest of the site and implemented my JavaScript solutions, building the store with Drupal for easy continuous support.",
         "projectSite": "https://www.fredrogers.org/",
         "showCase": "A Friendly Neighborhood",
         "featured": true,
@@ -25,7 +25,7 @@
     {
         "projectType": "Web",
         "projectName": "Dicks Sporting Goods",
-        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both I am happy to say that I am a part of their company. In the technology department I assist in developing and adding marketing strategies, a newly developed in house tool for our marketing teams built in angular, and redeveloping static pages to angular based pages.",
+        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both, I am happy to say that I am a part of their company. In the technology department I assist in developing and planning marketing strategies. We built and maintain a in house tool for our marketing teams built in angular, and redeveloping static pages to angular based dynamic pages.",
         "projectSite": "https://dickssportinggoods.com",
         "showCase": "Fitness matters",
         "featured": true,
@@ -48,7 +48,7 @@
     {
         "projectType": "Web",
         "projectName": "Golf Galaxy",
-        "projectDesc": "Golf Galaxy is a company owned by Dicks Sporting Goods focused on golfing, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
+        "projectDesc": "Golf Galaxy is a company owned by Dicks Sporting Goods focused on golf, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
         "projectSite": "https://www.golfgalaxy.com/",
         "showCase": "Leading Transportation Technology",
         "featured": false,
@@ -69,7 +69,7 @@
     {
         "projectType": "Web",
         "projectName": "Pennsylvania Lottery",
-        "projectDesc": "The PA Lottery was built before I was brought on, however the amount of legacy code and outdated or broken CSS was something we had to find solutions for. I have been a part of the team pushing forward on cleaning it up and making the site more maintainable for the ever-growing web presence. Marketing on the site updates on strict schedules, which were often sudden changes,  requiring solutions that allowed us to update as needed with the least amount of downtime. Along with full time support of the website,I have also created marketing emails, and an automated Style Guide that is ran by Handlebars.js to ensure that the future solutions can be as clean as possible. Using the Style Guide has led to massive improvements of development time to handle the ongoing revamp and rebuilds of the site and components!",
+        "projectDesc": "The PA Lottery was built before I was brought on, however the amount of legacy code and outdated or broken CSS was something we had to find solutions for. I have been a part of the team pushing forward on cleaning it up and making the site more maintainable for the ever-growing web presence. Marketing on the site updates on strict schedules, which were often sudden changes,  requiring solutions that allowed us to update as needed with the least amount of downtime. Along with full time support of the website, I have also created marketing emails, and an automated Style Guide that is ran by Handlebars.js to ensure that the future solutions can be as clean as possible. Using the Style Guide has led to massive improvements of development time to handle the ongoing revamp and rebuilds of the site and components!",
         "projectSite": "https://www.palottery.state.pa.us",
         "showCase": "Benefits Older Pennsylvanians Every Day",
         "featured": true,
@@ -93,7 +93,7 @@
     {
         "projectType": "Web",
         "projectName": "Field And Stream",
-        "projectDesc": "Field and Stream is a company owned by Dicks Sporting Goods focused on fishing and hunting, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I was very excited to work on this project as I was raised hunting and fishing and it was fun to work on a site devoted to those traditional values!  I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
+        "projectDesc": "Field and Stream is a company owned by Dicks Sporting Goods focused on fishing and hunting, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I was very excited to work on this project as I was raised hunting and fishing and it was fun to work on a site devoted to those traditional values! I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
         "projectSite": "https://www.wabtec.com/",
         "showCase": "Leading Transportation Technology",
         "featured": false,
@@ -114,7 +114,7 @@
     {
         "projectType": "Web",
         "projectName": "Women of color network",
-        "projectDesc": "Foundations supporting the communities trying to escape violence and trying to help those in need hold a special place in my heart. When we were approached by the WOCN to develop their new site we took it without a second though! They already had a design and the content prepared from another group, we took that content and found a solution for it within WordPress that way the site could receive continuous updates from them as needed. I developed a WordPress template, and found the proper plugins to help them reach their goal! Has been redesigned since we took on the project.",
+        "projectDesc": "Foundations supporting the communities trying to escape violence and trying to help those in need holds a special place in my heart. When we were approached by the WOCN to develop their new site we took it without a second though! They already had a design and the content prepared from another group, we took that content and found a solution for it within WordPress that way the site could receive continuous updates from them as needed. I developed a WordPress template, and found the proper plugins to help them reach their goal! It has been redesigned since we took on the project 7 years ago.",
         "projectSite": "https://wocninc.org/",
         "showCase": "Wellness and Leadership",
         "featured": false,
@@ -136,7 +136,7 @@
     {
         "projectType": "Web",
         "projectName": "Mylan",
-        "projectDesc": "At my time at Ciber, I was full time supporting Mylan's projects. At the time they had an English website and that was needing a solution to move the websites design to support other languages. I helped them reach that goal by making solutions and choices with a small team of designers and backend architects. After the creation of a template that would support other languages, we implemented the HTML into SiteCore. After the creation of several languages, I had gone through and revamped mobile to ensure it could outreach to the maximum amount of people.",
+        "projectDesc": "At my time at Ciber, I was full time supporting Mylan's projects. At the time they had an English website and that was needing a solution to move the websites design to support other languages. I helped them reach that goal by making solutions and choices with a small team of designers and backend architects. After the creation of a template that would support other languages we implemented the HTML into SiteCore. After the creation of several languages, I had gone through and revamped mobile to ensure it could outreach to the maximum amount of people.",
         "projectSite": "https://www.mylan.com/",
         "showCase": "Putting Patients First",
         "featured": false,
@@ -206,7 +206,7 @@
     {
         "projectType": "Web",
         "projectName": "Center Rock",
-        "projectDesc": "This was my first project as an intern, and my first 'real life' experience with web development. Our agency chose to use WordPress due to the updating nature of the company with products, offers, news, and services. I created the original WordPress site using a pre-existing template and grabbing plugins that were needed to get a rough draft done. After the initial rough draft was complete, I had gone and cleaned up parts of the JavaScript, CSS, and the PHP that were from the template and plugins to match the client approved designs. It was a great way to hit the ground running!",
+        "projectDesc": "This was my first project as an intern, and my first 'real life' experience with web development. Our agency chose to use WordPress due to the consistent changing nature of the company with products, offers, news, and services. I created the original WordPress site using a pre-existing template and grabbing plugins that were needed to get a rough draft done. After the initial rough draft was complete, I had gone and cleaned up parts of the JavaScript, CSS, and the PHP that were from the template and plugins to match the client approved designs. It was a great way to hit the ground running!",
         "projectSite": "https://centerrock.com/",
         "showCase": "Raising The Bar",
         "featured": false,

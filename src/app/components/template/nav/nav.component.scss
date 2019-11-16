@@ -146,6 +146,10 @@ nav {
             @include bgGrad(#1b1a1a, #2d2d2d, 90deg);
         }
 
+        @media(min-width: 1028px) {
+        flex: 1 0 315px
+        }
+
         .logo {
             color: #fff;
             width: 100%;

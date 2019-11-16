@@ -10,7 +10,7 @@ import { ContactForm } from '../models/contact-form';
 
 export class ContactServiceService {
 
-  ServerUrl = 'http://thomasbalaban.com/';
+  ServerUrl = 'https://thomasbalaban.com/';
   errorData: {};
 
   httpOptions = {
@@ -30,8 +30,10 @@ export class ContactServiceService {
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
+      // tslint:disable-next-line:no-console
       console.log('an error has occured: ', error.error.message);
     } else {
+      // tslint:disable-next-line:no-console
       console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
     }
 

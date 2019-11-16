@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private title: Title
+  ) { }
 
   ngOnInit() {
+    this.title.setTitle('Portfolio | Thomas Balaban - Pittsburgh Web Designer');
   }
 
 }

@@ -58,7 +58,7 @@ import {
   ]
 })
 export class AppComponent {
-  title = 'ttabz';
+  title = 'Thomas Balaban - Pittsburgh Web Designer';
 
   getPage(outlet) {
     return outlet.activatedRouteData.page || 'home';

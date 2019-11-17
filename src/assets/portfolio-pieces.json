@@ -25,7 +25,7 @@
     {
         "projectType": "Web",
         "projectName": "Dicks Sporting Goods",
-        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both, I am happy to say that I am a part of their company. In the technology department I assist in developing and planning marketing strategies. We built and maintain a in house tool for our marketing teams built in angular, and redeveloping static pages to angular based dynamic pages.",
+        "projectDesc": "A company inspired by fitness and health, and is very active in the communities of both, I am happy to say that I am a part of their company. In the technology department I assist in developing and planning marketing strategies. We built and maintain an in house tool for our marketing teams built in angular, and redeveloping static pages to angular based dynamic pages.",
         "projectSite": "https://dickssportinggoods.com",
         "showCase": "Fitness matters",
         "featured": true,
@@ -69,7 +69,7 @@
     {
         "projectType": "Web",
         "projectName": "Pennsylvania Lottery",
-        "projectDesc": "The PA Lottery was built before I was brought on, however the amount of legacy code and outdated or broken CSS was something we had to find solutions for. I have been a part of the team pushing forward on cleaning it up and making the site more maintainable for the ever-growing web presence. Marketing on the site updates on strict schedules, which were often sudden changes,  requiring solutions that allowed us to update as needed with the least amount of downtime. Along with full time support of the website, I have also created marketing emails, and an automated Style Guide that is ran by Handlebars.js to ensure that the future solutions can be as clean as possible. Using the Style Guide has led to massive improvements of development time to handle the ongoing revamp and rebuilds of the site and components!",
+        "projectDesc": "The PA Lottery was built before I was brought on, however the amount of legacy code and outdated or broken CSS was something we had to find solutions for. I have been a part of the team pushing forward on cleaning it up and making the site more maintainable for the ever-growing web presence. Marketing on the site updates on strict schedules, which were often sudden changes,  requiring solutions that allowed us to update as needed with the least amount of downtime. Along with full time support of the website, I have also created marketing emails, and an automated Style Guide that is run by Handlebars.js to ensure that the future solutions can be as clean as possible. Using the Style Guide has led to massive improvements of development time to handle the ongoing revamp and rebuilds of the site and components!",
         "projectSite": "https://www.palottery.state.pa.us",
         "showCase": "Benefits Older Pennsylvanians Every Day",
         "featured": true,
@@ -94,7 +94,7 @@
         "projectType": "Web",
         "projectName": "Field And Stream",
         "projectDesc": "Field and Stream is a company owned by Dicks Sporting Goods focused on fishing and hunting, I managed their homepage until our in house tool was ready to be used for the marketing team to manage it. I was very excited to work on this project as I was raised hunting and fishing and it was fun to work on a site devoted to those traditional values! I develop marketing pieces, help with design phases, and convert single static pages over to our angular system.",
-        "projectSite": "https://www.wabtec.com/",
+        "projectSite": "https://www.fieldandstreamshop.com/",
         "showCase": "Leading Transportation Technology",
         "featured": false,
         "techUsed": [
